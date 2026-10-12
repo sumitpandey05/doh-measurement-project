@@ -1,0 +1,21 @@
+# Core (needed by every script)
+dnspython>=2.4
+httpx[http2]>=0.25
+PyYAML>=6.0
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+xgboost>=2.0
+joblib>=1.3
+scapy>=2.5
+
+# Plots / notebooks
+matplotlib>=3.7
+seaborn>=0.12
+jupyter
+ipykernel
+nbformat
+
+# Tests (optional)
+pytest>=7
+nbclient

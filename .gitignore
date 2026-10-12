@@ -1,0 +1,18 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# raw captures are big and stay on each person's own machine
+*.pcap
+*.pcapng
+capture/pcaps/
+
+# big datasets and trained models stay local (download links are in README)
+ml/data/
+ml/data_synthetic/
+ml/artifacts/*.joblib
+ml/artifacts/*.npy
+.venv/
