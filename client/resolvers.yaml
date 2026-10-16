@@ -1,0 +1,14 @@
+# One entry per public resolver you want to measure.
+#   classic_ip : plain DNS (UDP/53) address
+#   doh_url    : the DoH endpoint (RFC 8484 wire format)
+# Optional keys (only for local testing): classic_port, tls_verify
+resolvers:
+  - name: cloudflare
+    classic_ip: 1.1.1.1
+    doh_url: https://cloudflare-dns.com/dns-query
+  - name: google
+    classic_ip: 8.8.8.8
+    doh_url: https://dns.google/dns-query
+  - name: quad9
+    classic_ip: 9.9.9.9
+    doh_url: https://dns.quad9.net/dns-query
