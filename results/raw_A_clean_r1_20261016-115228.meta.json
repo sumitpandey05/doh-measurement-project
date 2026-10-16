@@ -1,0 +1,32 @@
+{
+  "run_id": "A_clean_r1_20261016-115228",
+  "args": {
+    "person": "A",
+    "profile": "clean",
+    "repeats": 1,
+    "seed": 42,
+    "domains": "/home/sumit/cn-project/doh-measurement-project/results/domains.csv",
+    "resolvers": "/home/sumit/cn-project/doh-measurement-project/client/resolvers.yaml",
+    "only": [
+      "cloudflare"
+    ],
+    "limit": 3,
+    "qtype": "A",
+    "timeout": 5.0,
+    "udp_retries": 0,
+    "http2": false,
+    "pause": 0.0,
+    "out_dir": "/home/sumit/cn-project/doh-measurement-project/results"
+  },
+  "queries_written": 9,
+  "status_counts": {
+    "ok": 9
+  },
+  "interrupted": false,
+  "started_epoch": 1792151548.4956808,
+  "finished_epoch": 1792151549.1012678,
+  "python": "3.12.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dnspython": "2.8.0",
+  "httpx": "0.28.1"
+}
