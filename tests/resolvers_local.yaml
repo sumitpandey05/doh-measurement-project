@@ -1,0 +1,14 @@
+# Points the client at the mock servers started by `python tests/mock_servers.py`
+# (default ports). Use for a manual dry run without the internet:
+#   python tests/mock_servers.py --delay-ms 10        # in one terminal
+#   python client/run_batch.py --person A --limit 5 --resolvers tests/resolvers_local.yaml
+resolvers:
+  - name: local_http
+    classic_ip: 127.0.0.1
+    classic_port: 15353
+    doh_url: http://127.0.0.1:18053/dns-query
+  - name: local_tls
+    classic_ip: 127.0.0.1
+    classic_port: 15353
+    doh_url: https://127.0.0.1:18443/dns-query
+    tls_verify: false
