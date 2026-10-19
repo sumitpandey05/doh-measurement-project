@@ -1,0 +1,10 @@
+person,profile,run_id,seq,domain,resolver,method,qtype,server,send_ts,recv_ts,rtt_ms,status,rcode,answer_count,resolved_ips,attempts,error
+A,clean,A_clean_r1_20261016-115228,1,youtube.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792151548.621229,1792151548.72702,105.79,ok,NOERROR,4,192.178.173.91;192.178.173.93;192.178.173.190;192.178.173.136,1,
+A,clean,A_clean_r1_20261016-115228,2,youtube.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792151548.728927,1792151548.761891,32.964,ok,NOERROR,1,142.251.220.14,1,
+A,clean,A_clean_r1_20261016-115228,3,youtube.com,cloudflare,classic_udp,A,1.1.1.1,1792151548.762838,1792151548.76618,3.341,ok,NOERROR,4,192.178.174.136;192.178.174.190;192.178.174.91;192.178.174.93,1,
+A,clean,A_clean_r1_20261016-115228,4,google.com,cloudflare,classic_udp,A,1.1.1.1,1792151548.766624,1792151548.772532,5.908,ok,NOERROR,6,192.178.211.101;192.178.211.102;192.178.211.113;192.178.211.138;192.178.211.139;192.178.211.100,1,
+A,clean,A_clean_r1_20261016-115228,5,google.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792151548.773136,1792151548.887342,114.207,ok,NOERROR,6,142.251.106.113;142.251.106.102;142.251.106.101;142.251.106.100;142.251.106.138;142.251.106.139,1,
+A,clean,A_clean_r1_20261016-115228,6,google.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792151548.888069,1792151548.923704,35.635,ok,NOERROR,6,142.251.106.100;142.251.106.138;142.251.106.139;142.251.106.113;142.251.106.102;142.251.106.101,1,
+A,clean,A_clean_r1_20261016-115228,7,facebook.com,cloudflare,classic_udp,A,1.1.1.1,1792151548.925137,1792151548.958465,33.329,ok,NOERROR,1,57.144.42.1,1,
+A,clean,A_clean_r1_20261016-115228,8,facebook.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792151548.95889,1792151548.992358,33.467,ok,NOERROR,1,57.144.80.1,1,
+A,clean,A_clean_r1_20261016-115228,9,facebook.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792151548.994039,1792151549.0997,105.661,ok,NOERROR,1,57.144.54.1,1,
