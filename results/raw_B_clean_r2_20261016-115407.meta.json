@@ -1,30 +1,30 @@
 {
-  "run_id": "A_clean_r1_20261016-111151",
+  "run_id": "B_clean_r2_20261016-115407",
   "args": {
-    "person": "A",
+    "person": "B",
     "profile": "clean",
-    "repeats": 1,
+    "repeats": 3,
     "seed": 42,
     "domains": "/home/mahi/doh-measurement-project/results/domains.csv",
     "resolvers": "/home/mahi/doh-measurement-project/client/resolvers.yaml",
-    "only": [
-      "cloudflare"
-    ],
-    "limit": 3,
+    "only": null,
+    "limit": null,
     "qtype": "A",
     "timeout": 5.0,
-    "udp_retries": 0,
+    "udp_retries": 2,
     "http2": false,
     "pause": 0.02,
     "out_dir": "/home/mahi/doh-measurement-project/results"
   },
-  "queries_written": 9,
+  "queries_written": 450,
   "status_counts": {
-    "ok": 9
+    "ok": 350,
+    "http_505": 98,
+    "error": 2
   },
   "interrupted": false,
-  "started_epoch": 1792149111.684221,
-  "finished_epoch": 1792149112.5509865,
+  "started_epoch": 1792151647.6095371,
+  "finished_epoch": 1792151700.6130404,
   "python": "3.14.4",
   "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
   "dnspython": "2.9.0",
