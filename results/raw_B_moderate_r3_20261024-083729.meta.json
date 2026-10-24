@@ -1,0 +1,31 @@
+{
+  "run_id": "B_moderate_r3_20261024-083729",
+  "args": {
+    "person": "B",
+    "profile": "moderate",
+    "repeats": 3,
+    "seed": 42,
+    "domains": "/home/mahi/doh-measurement-project/results/domains.csv",
+    "resolvers": "/home/mahi/doh-measurement-project/client/resolvers.yaml",
+    "only": null,
+    "limit": null,
+    "qtype": "A",
+    "timeout": 5.0,
+    "udp_retries": 2,
+    "http2": false,
+    "pause": 0.02,
+    "out_dir": "/home/mahi/doh-measurement-project/results"
+  },
+  "queries_written": 450,
+  "status_counts": {
+    "ok": 350,
+    "http_505": 100
+  },
+  "interrupted": false,
+  "started_epoch": 1792831049.1129868,
+  "finished_epoch": 1792831165.2700076,
+  "python": "3.14.4",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "dnspython": "2.9.0",
+  "httpx": "0.28.1"
+}
