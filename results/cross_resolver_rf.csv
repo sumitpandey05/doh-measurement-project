@@ -1,0 +1,7 @@
+group,n_flows,predicted_malicious,false_positive_rate,mean_p_malicious
+ALL,825,0,0.0,0.14672727272727273
+Resolver=cloudflare,211,0,0.0,0.13928909952606636
+Resolver=google,210,0,0.0,0.13880952380952383
+Resolver=quad9,404,0,0.0,0.15472772277227725
+_file=own_flows_A.csv,411,0,0.0,0.15131386861313867
+_file=own_flows_B.csv,414,0,0.0,0.14217391304347826
