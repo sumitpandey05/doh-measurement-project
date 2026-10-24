@@ -1,0 +1,451 @@
+person,profile,run_id,seq,domain,resolver,method,qtype,server,send_ts,recv_ts,rtt_ms,status,rcode,answer_count,resolved_ips,attempts,error
+A,lossy,A_lossy_r1_20261024-074554,1,stackoverflow.com,cloudflare,classic_udp,A,1.1.1.1,1792827955.010879,1792827955.046508,35.629,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,2,stackoverflow.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827955.046785,1792827955.125556,78.771,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,3,stackoverflow.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827955.126693,1792827955.356129,229.436,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,4,stackoverflow.com,google,doh_warm,A,https://dns.google/dns-query,1792827955.422945,1792827955.521163,98.218,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,5,stackoverflow.com,google,doh_cold,A,https://dns.google/dns-query,1792827955.523481,1792827955.773116,249.635,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,6,stackoverflow.com,google,classic_udp,A,8.8.8.8,1792827955.775179,1792827955.814992,39.813,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,7,stackoverflow.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827955.880109,1792827956.104579,224.47,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,8,stackoverflow.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827956.104979,1792827956.344866,239.887,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,9,stackoverflow.com,quad9,classic_udp,A,9.9.9.9,1792827956.345098,1792827956.381117,36.019,ok,NOERROR,1,198.252.206.1,1,
+A,lossy,A_lossy_r1_20261024-074554,10,ebay.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827956.446959,1792827956.522926,75.967,ok,NOERROR,2,203.116.175.107;203.116.175.176,1,
+A,lossy,A_lossy_r1_20261024-074554,11,ebay.com,cloudflare,classic_udp,A,1.1.1.1,1792827956.524929,1792827956.558255,33.326,ok,NOERROR,2,23.212.0.102;23.212.0.103,1,
+A,lossy,A_lossy_r1_20261024-074554,12,ebay.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827956.559983,1792827956.862884,302.901,ok,NOERROR,2,203.116.175.107;203.116.175.176,1,
+A,lossy,A_lossy_r1_20261024-074554,13,ebay.com,google,doh_warm,A,https://dns.google/dns-query,1792827956.929119,1792827957.008036,78.916,ok,NOERROR,2,23.55.44.102;23.55.44.113,1,
+A,lossy,A_lossy_r1_20261024-074554,14,ebay.com,google,classic_udp,A,8.8.8.8,1792827957.009944,1792827957.043267,33.323,ok,NOERROR,2,23.212.0.103;23.212.0.102,1,
+A,lossy,A_lossy_r1_20261024-074554,15,ebay.com,google,doh_cold,A,https://dns.google/dns-query,1792827957.044523,1792827957.306883,262.359,ok,NOERROR,2,203.116.175.107;203.116.175.176,1,
+A,lossy,A_lossy_r1_20261024-074554,16,ebay.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827957.372379,1792827957.617313,244.934,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,17,ebay.com,quad9,classic_udp,A,9.9.9.9,1792827957.618601,1792827957.65853,39.929,ok,NOERROR,2,23.212.0.102;23.212.0.103,1,
+A,lossy,A_lossy_r1_20261024-074554,18,ebay.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827957.659325,1792827957.906493,247.168,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,19,wikipedia.org,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827957.972235,1792827958.206879,234.645,ok,NOERROR,1,208.80.154.224,1,
+A,lossy,A_lossy_r1_20261024-074554,20,wikipedia.org,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827958.209086,1792827958.292562,83.476,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,21,wikipedia.org,cloudflare,classic_udp,A,1.1.1.1,1792827958.294352,1792827958.328708,34.356,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,22,wikipedia.org,google,doh_warm,A,https://dns.google/dns-query,1792827958.395214,1792827958.608179,212.965,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,23,wikipedia.org,google,classic_udp,A,8.8.8.8,1792827958.610621,1792827958.650363,39.742,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,24,wikipedia.org,google,doh_cold,A,https://dns.google/dns-query,1792827958.651887,1792827959.903971,1252.084,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,25,wikipedia.org,quad9,classic_udp,A,9.9.9.9,1792827959.97127,1792827960.004603,33.333,ok,NOERROR,1,103.102.166.224,1,
+A,lossy,A_lossy_r1_20261024-074554,26,wikipedia.org,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827960.005482,1792827960.236,230.518,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,27,wikipedia.org,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827960.237371,1792827960.503537,266.166,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,28,irctc.co.in,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827960.566481,1792827960.632841,66.36,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,29,irctc.co.in,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827960.633371,1792827960.848987,215.616,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,30,irctc.co.in,cloudflare,classic_udp,A,1.1.1.1,1792827960.849579,1792827960.880036,30.457,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,31,irctc.co.in,google,doh_warm,A,https://dns.google/dns-query,1792827960.944958,1792827961.016735,71.777,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,32,irctc.co.in,google,classic_udp,A,8.8.8.8,1792827961.018585,1792827961.061395,42.811,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,33,irctc.co.in,google,doh_cold,A,https://dns.google/dns-query,1792827961.063281,1792827961.282573,219.292,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,34,irctc.co.in,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827961.347995,1792827961.607917,259.922,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,35,irctc.co.in,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827961.60945,1792827961.872459,263.009,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,36,irctc.co.in,quad9,classic_udp,A,9.9.9.9,1792827961.873044,1792827961.908502,35.458,ok,NOERROR,1,103.252.142.27,1,
+A,lossy,A_lossy_r1_20261024-074554,37,bing.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827961.976914,1792827962.230237,253.323,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,38,bing.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827962.233283,1792827962.308064,74.781,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,39,bing.com,cloudflare,classic_udp,A,1.1.1.1,1792827962.309361,1792827962.344092,34.731,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,40,bing.com,google,doh_warm,A,https://dns.google/dns-query,1792827962.40872,1792827962.485345,76.625,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,41,bing.com,google,doh_cold,A,https://dns.google/dns-query,1792827962.488317,1792827962.697749,209.432,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,42,bing.com,google,classic_udp,A,8.8.8.8,1792827962.698612,1792827962.730443,31.831,ok,NOERROR,2,150.171.28.10;150.171.27.10,1,
+A,lossy,A_lossy_r1_20261024-074554,43,bing.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827962.794194,1792827963.129479,335.286,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,44,bing.com,quad9,classic_udp,A,9.9.9.9,1792827963.130309,1792827963.16366,33.351,ok,NOERROR,2,150.171.27.10;150.171.28.10,1,
+A,lossy,A_lossy_r1_20261024-074554,45,bing.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827963.164422,1792827963.446237,281.816,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,46,baidu.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827963.511364,1792827963.586951,75.587,ok,NOERROR,4,111.63.65.103;110.242.74.102;111.63.65.247;124.237.177.164,1,
+A,lossy,A_lossy_r1_20261024-074554,47,baidu.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827963.589674,1792827964.171726,582.052,ok,NOERROR,4,111.63.65.103;111.63.65.247;124.237.177.164;110.242.74.102,1,
+A,lossy,A_lossy_r1_20261024-074554,48,baidu.com,cloudflare,classic_udp,A,1.1.1.1,1792827964.175031,1792827964.215825,40.794,ok,NOERROR,4,111.63.65.103;111.63.65.247;124.237.177.164;110.242.74.102,1,
+A,lossy,A_lossy_r1_20261024-074554,49,baidu.com,google,classic_udp,A,8.8.8.8,1792827964.282156,1792827964.315586,33.43,ok,NOERROR,4,110.242.74.102;111.63.65.103;111.63.65.247;124.237.177.164,1,
+A,lossy,A_lossy_r1_20261024-074554,50,baidu.com,google,doh_warm,A,https://dns.google/dns-query,1792827964.315899,1792827964.389036,73.137,ok,NOERROR,4,124.237.177.164;111.63.65.103;111.63.65.247;110.242.74.102,1,
+A,lossy,A_lossy_r1_20261024-074554,51,baidu.com,google,doh_cold,A,https://dns.google/dns-query,1792827964.391235,1792827964.637105,245.87,ok,NOERROR,4,111.63.65.103;111.63.65.247;110.242.74.102;124.237.177.164,1,
+A,lossy,A_lossy_r1_20261024-074554,52,baidu.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827964.704902,1792827964.971088,266.186,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,53,baidu.com,quad9,classic_udp,A,9.9.9.9,1792827964.971586,1792827965.016345,44.759,ok,NOERROR,4,124.237.177.164;110.242.74.102;111.63.65.103;111.63.65.247,1,
+A,lossy,A_lossy_r1_20261024-074554,54,baidu.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827965.018003,1792827965.572357,554.355,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,55,yahoo.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827965.636078,1792827965.711161,75.083,ok,NOERROR,6,98.137.11.163;98.137.11.164;74.6.143.25;74.6.231.20;74.6.231.21;74.6.143.26,1,
+A,lossy,A_lossy_r1_20261024-074554,56,yahoo.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827965.715086,1792827965.967781,252.695,ok,NOERROR,6,98.137.11.164;74.6.231.20;74.6.143.25;74.6.143.26;74.6.231.21;98.137.11.163,1,
+A,lossy,A_lossy_r1_20261024-074554,57,yahoo.com,cloudflare,classic_udp,A,1.1.1.1,1792827965.971575,1792827966.009531,37.956,ok,NOERROR,6,74.6.231.21;98.137.11.163;98.137.11.164;74.6.143.25;74.6.143.26;74.6.231.20,1,
+A,lossy,A_lossy_r1_20261024-074554,58,yahoo.com,google,classic_udp,A,8.8.8.8,1792827966.075743,1792827966.117911,42.168,ok,NOERROR,6,74.6.231.20;74.6.231.21;98.137.11.163;98.137.11.164;74.6.143.25;74.6.143.26,1,
+A,lossy,A_lossy_r1_20261024-074554,59,yahoo.com,google,doh_cold,A,https://dns.google/dns-query,1792827966.119098,1792827966.359877,240.779,ok,NOERROR,6,74.6.231.21;98.137.11.163;98.137.11.164;74.6.143.26;74.6.231.20;74.6.143.25,1,
+A,lossy,A_lossy_r1_20261024-074554,60,yahoo.com,google,doh_warm,A,https://dns.google/dns-query,1792827966.363953,1792827966.437198,73.245,ok,NOERROR,6,98.137.11.164;74.6.143.25;98.137.11.163;74.6.143.26;74.6.231.20;74.6.231.21,1,
+A,lossy,A_lossy_r1_20261024-074554,61,yahoo.com,quad9,classic_udp,A,9.9.9.9,1792827966.50683,1792827966.542928,36.098,ok,NOERROR,6,74.6.143.26;74.6.231.20;74.6.231.21;98.137.11.163;98.137.11.164;74.6.143.25,1,
+A,lossy,A_lossy_r1_20261024-074554,62,yahoo.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827966.544022,1792827968.470798,1926.776,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,63,yahoo.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827968.472305,1792827969.834522,1362.217,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,64,reddit.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827969.897641,1792827969.965947,68.306,ok,NOERROR,4,151.101.193.140;151.101.129.140;151.101.1.140;151.101.65.140,1,
+A,lossy,A_lossy_r1_20261024-074554,65,reddit.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827969.966665,1792827970.183952,217.287,ok,NOERROR,4,151.101.65.140;151.101.1.140;151.101.193.140;151.101.129.140,1,
+A,lossy,A_lossy_r1_20261024-074554,66,reddit.com,cloudflare,classic_udp,A,1.1.1.1,1792827970.184692,1792827970.226051,41.36,ok,NOERROR,4,151.101.65.140;151.101.129.140;151.101.193.140;151.101.1.140,1,
+A,lossy,A_lossy_r1_20261024-074554,67,reddit.com,google,doh_warm,A,https://dns.google/dns-query,1792827970.288635,1792827970.363383,74.748,ok,NOERROR,4,151.101.129.140;151.101.1.140;151.101.65.140;151.101.193.140,1,
+A,lossy,A_lossy_r1_20261024-074554,68,reddit.com,google,doh_cold,A,https://dns.google/dns-query,1792827970.366593,1792827970.603755,237.161,ok,NOERROR,4,151.101.193.140;151.101.65.140;151.101.129.140;151.101.1.140,1,
+A,lossy,A_lossy_r1_20261024-074554,69,reddit.com,google,classic_udp,A,8.8.8.8,1792827970.605278,1792827970.645894,40.616,ok,NOERROR,4,151.101.1.140;151.101.65.140;151.101.129.140;151.101.193.140,1,
+A,lossy,A_lossy_r1_20261024-074554,70,reddit.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827970.711469,1792827970.962634,251.165,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,71,reddit.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827970.964187,1792827971.317044,352.857,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,72,reddit.com,quad9,classic_udp,A,9.9.9.9,1792827971.317969,1792827971.355368,37.399,ok,NOERROR,4,151.101.193.140;151.101.1.140;151.101.65.140;151.101.129.140,1,
+A,lossy,A_lossy_r1_20261024-074554,73,adobe.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827971.422071,1792827971.50042,78.348,ok,NOERROR,2,184.27.197.121;184.27.197.32,1,
+A,lossy,A_lossy_r1_20261024-074554,74,adobe.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827971.503423,1792827971.759455,256.032,ok,NOERROR,2,184.27.197.32;184.27.197.121,1,
+A,lossy,A_lossy_r1_20261024-074554,75,adobe.com,cloudflare,classic_udp,A,1.1.1.1,1792827971.762052,1792827971.892548,130.496,ok,NOERROR,2,49.44.130.139;49.44.130.131,1,
+A,lossy,A_lossy_r1_20261024-074554,76,adobe.com,google,doh_cold,A,https://dns.google/dns-query,1792827971.960148,1792827972.267743,307.596,ok,NOERROR,2,49.44.130.139;49.44.130.131,1,
+A,lossy,A_lossy_r1_20261024-074554,77,adobe.com,google,doh_warm,A,https://dns.google/dns-query,1792827972.270753,1792827972.443131,172.378,ok,NOERROR,2,49.44.130.139;49.44.130.131,1,
+A,lossy,A_lossy_r1_20261024-074554,78,adobe.com,google,classic_udp,A,8.8.8.8,1792827972.445208,1792827972.490414,45.206,ok,NOERROR,2,49.44.130.131;49.44.130.139,1,
+A,lossy,A_lossy_r1_20261024-074554,79,adobe.com,quad9,classic_udp,A,9.9.9.9,1792827972.556567,1792827972.594305,37.738,ok,NOERROR,2,49.44.130.139;49.44.130.131,1,
+A,lossy,A_lossy_r1_20261024-074554,80,adobe.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827972.595806,1792827972.848133,252.327,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,81,adobe.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827972.848661,1792827973.088309,239.648,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,82,netflix.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827973.154975,1792827973.403055,248.08,ok,NOERROR,2,207.45.73.1;207.45.72.1,1,
+A,lossy,A_lossy_r1_20261024-074554,83,netflix.com,cloudflare,classic_udp,A,1.1.1.1,1792827973.405394,1792827973.443982,38.588,ok,NOERROR,2,207.45.72.1;207.45.73.1,1,
+A,lossy,A_lossy_r1_20261024-074554,84,netflix.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827973.444526,1792827973.522213,77.687,ok,NOERROR,2,207.45.72.1;207.45.73.1,1,
+A,lossy,A_lossy_r1_20261024-074554,85,netflix.com,google,classic_udp,A,8.8.8.8,1792827973.590292,1792827973.632578,42.285,ok,NOERROR,2,207.45.73.1;207.45.72.1,1,
+A,lossy,A_lossy_r1_20261024-074554,86,netflix.com,google,doh_cold,A,https://dns.google/dns-query,1792827973.634502,1792827973.875314,240.812,ok,NOERROR,2,207.45.72.1;207.45.73.1,1,
+A,lossy,A_lossy_r1_20261024-074554,87,netflix.com,google,doh_warm,A,https://dns.google/dns-query,1792827973.87809,1792827973.953277,75.188,ok,NOERROR,2,207.45.72.1;207.45.73.1,1,
+A,lossy,A_lossy_r1_20261024-074554,88,netflix.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827974.019562,1792827974.282398,262.836,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,89,netflix.com,quad9,classic_udp,A,9.9.9.9,1792827974.282963,1792827974.322997,40.034,ok,NOERROR,2,207.45.72.1;207.45.73.1,1,
+A,lossy,A_lossy_r1_20261024-074554,90,netflix.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827974.324449,1792827974.554369,229.92,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,91,github.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827974.617522,1792827974.856308,238.786,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,92,github.com,cloudflare,classic_udp,A,1.1.1.1,1792827974.856946,1792827974.889338,32.393,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,93,github.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827974.889678,1792827974.962522,72.844,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,94,github.com,google,doh_warm,A,https://dns.google/dns-query,1792827975.029404,1792827975.1389,109.496,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,95,github.com,google,classic_udp,A,8.8.8.8,1792827975.140827,1792827975.174439,33.612,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,96,github.com,google,doh_cold,A,https://dns.google/dns-query,1792827975.176051,1792827975.431722,255.671,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,97,github.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827975.498888,1792827975.740408,241.52,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,98,github.com,quad9,classic_udp,A,9.9.9.9,1792827975.741041,1792827975.781297,40.256,ok,NOERROR,1,20.207.73.82,1,
+A,lossy,A_lossy_r1_20261024-074554,99,github.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827975.783412,1792827976.028054,244.642,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,100,qq.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827976.095251,1792827976.350542,255.291,ok,NOERROR,3,113.108.81.189;203.205.254.157;123.150.76.218,1,
+A,lossy,A_lossy_r1_20261024-074554,101,qq.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827976.353208,1792827976.71223,359.022,ok,NOERROR,3,203.205.254.157;123.150.76.218;113.108.81.189,1,
+A,lossy,A_lossy_r1_20261024-074554,102,qq.com,cloudflare,classic_udp,A,1.1.1.1,1792827976.714619,1792827976.754749,40.13,ok,NOERROR,3,203.205.254.157;113.108.81.189;123.150.76.218,1,
+A,lossy,A_lossy_r1_20261024-074554,103,qq.com,google,doh_cold,A,https://dns.google/dns-query,1792827976.822268,1792827977.075922,253.654,ok,NOERROR,3,123.150.76.218;113.108.81.189;203.205.254.157,1,
+A,lossy,A_lossy_r1_20261024-074554,104,qq.com,google,doh_warm,A,https://dns.google/dns-query,1792827977.077495,1792827977.154511,77.017,ok,NOERROR,3,203.205.254.157;113.108.81.189;123.150.76.218,1,
+A,lossy,A_lossy_r1_20261024-074554,105,qq.com,google,classic_udp,A,8.8.8.8,1792827977.155703,1792827977.194445,38.741,ok,NOERROR,3,123.150.76.218;203.205.254.157;113.108.81.189,1,
+A,lossy,A_lossy_r1_20261024-074554,106,qq.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827977.262587,1792827977.494475,231.887,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,107,qq.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827977.495577,1792827977.743739,248.163,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,108,qq.com,quad9,classic_udp,A,9.9.9.9,1792827977.744323,1792827977.787476,43.153,ok,NOERROR,3,113.108.81.189;123.150.76.218;203.205.254.157,1,
+A,lossy,A_lossy_r1_20261024-074554,109,pinterest.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827977.854383,1792827977.932696,78.312,ok,NOERROR,4,151.101.64.84;151.101.192.84;151.101.128.84;151.101.0.84,1,
+A,lossy,A_lossy_r1_20261024-074554,110,pinterest.com,cloudflare,classic_udp,A,1.1.1.1,1792827977.935504,1792827977.970494,34.99,ok,NOERROR,4,151.101.128.84;151.101.192.84;151.101.0.84;151.101.64.84,1,
+A,lossy,A_lossy_r1_20261024-074554,111,pinterest.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827977.972015,1792827978.225464,253.449,ok,NOERROR,4,151.101.0.84;151.101.128.84;151.101.192.84;151.101.64.84,1,
+A,lossy,A_lossy_r1_20261024-074554,112,pinterest.com,google,classic_udp,A,8.8.8.8,1792827978.293353,1792827978.333183,39.829,ok,NOERROR,4,151.101.64.84;151.101.128.84;151.101.192.84;151.101.0.84,1,
+A,lossy,A_lossy_r1_20261024-074554,113,pinterest.com,google,doh_warm,A,https://dns.google/dns-query,1792827978.334877,1792827978.480792,145.915,ok,NOERROR,4,151.101.0.84;151.101.192.84;151.101.64.84;151.101.128.84,1,
+A,lossy,A_lossy_r1_20261024-074554,114,pinterest.com,google,doh_cold,A,https://dns.google/dns-query,1792827978.485185,1792827978.732218,247.033,ok,NOERROR,4,151.101.192.84;151.101.128.84;151.101.64.84;151.101.0.84,1,
+A,lossy,A_lossy_r1_20261024-074554,115,pinterest.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827978.802207,1792827979.045305,243.098,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,116,pinterest.com,quad9,classic_udp,A,9.9.9.9,1792827979.046284,1792827979.083906,37.622,ok,NOERROR,4,151.101.0.84;151.101.64.84;151.101.128.84;151.101.192.84,1,
+A,lossy,A_lossy_r1_20261024-074554,117,pinterest.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827979.084815,1792827979.31718,232.365,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,118,mozilla.org,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827979.382263,1792827979.72236,340.097,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,119,mozilla.org,cloudflare,classic_udp,A,1.1.1.1,1792827979.724691,1792827979.762759,38.068,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,120,mozilla.org,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827979.763546,1792827979.832685,69.138,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,121,mozilla.org,google,doh_cold,A,https://dns.google/dns-query,1792827979.901975,1792827980.174447,272.472,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,122,mozilla.org,google,classic_udp,A,8.8.8.8,1792827980.176396,1792827980.217178,40.782,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,123,mozilla.org,google,doh_warm,A,https://dns.google/dns-query,1792827980.217654,1792827980.292821,75.168,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,124,mozilla.org,quad9,classic_udp,A,9.9.9.9,1792827980.360177,1792827980.400387,40.21,ok,NOERROR,1,35.190.14.201,1,
+A,lossy,A_lossy_r1_20261024-074554,125,mozilla.org,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827980.401421,1792827980.660102,258.681,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,126,mozilla.org,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827980.662035,1792827980.926749,264.715,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,127,ibm.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827979.416884,1792827979.740917,324.034,ok,NOERROR,1,118.215.81.142,1,
+A,lossy,A_lossy_r1_20261024-074554,128,ibm.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827979.743267,1792827979.902632,159.365,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,129,ibm.com,cloudflare,classic_udp,A,1.1.1.1,1792827979.903362,1792827979.991473,88.111,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,130,ibm.com,google,doh_warm,A,https://dns.google/dns-query,1792827980.057425,1792827980.157358,99.932,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,131,ibm.com,google,classic_udp,A,8.8.8.8,1792827980.159317,1792827980.203099,43.782,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,132,ibm.com,google,doh_cold,A,https://dns.google/dns-query,1792827980.205113,1792827980.447806,242.693,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,133,ibm.com,quad9,classic_udp,A,9.9.9.9,1792827980.514211,1792827980.588233,74.022,ok,NOERROR,1,23.9.223.134,1,
+A,lossy,A_lossy_r1_20261024-074554,134,ibm.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827980.589542,1792827980.845727,256.185,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,135,ibm.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827980.84658,1792827981.133472,286.893,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,136,bbc.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827981.198567,1792827981.276922,78.355,ok,NOERROR,4,151.101.192.81;151.101.0.81;151.101.64.81;151.101.128.81,1,
+A,lossy,A_lossy_r1_20261024-074554,137,bbc.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827981.28009,1792827981.506941,226.851,ok,NOERROR,4,151.101.192.81;151.101.0.81;151.101.64.81;151.101.128.81,1,
+A,lossy,A_lossy_r1_20261024-074554,138,bbc.com,cloudflare,classic_udp,A,1.1.1.1,1792827981.507761,1792827981.537175,29.414,ok,NOERROR,4,151.101.0.81;151.101.64.81;151.101.128.81;151.101.192.81,1,
+A,lossy,A_lossy_r1_20261024-074554,139,bbc.com,google,doh_warm,A,https://dns.google/dns-query,1792827981.600481,1792827981.696803,96.322,ok,NOERROR,4,151.101.64.81;151.101.128.81;151.101.192.81;151.101.0.81,1,
+A,lossy,A_lossy_r1_20261024-074554,140,bbc.com,google,doh_cold,A,https://dns.google/dns-query,1792827981.697588,1792827981.922445,224.856,ok,NOERROR,4,151.101.64.81;151.101.192.81;151.101.0.81;151.101.128.81,1,
+A,lossy,A_lossy_r1_20261024-074554,141,bbc.com,google,classic_udp,A,8.8.8.8,1792827981.925472,1792827981.966803,41.331,ok,NOERROR,4,151.101.192.81;151.101.0.81;151.101.64.81;151.101.128.81,1,
+A,lossy,A_lossy_r1_20261024-074554,142,bbc.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827982.031461,1792827982.637545,606.085,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,143,bbc.com,quad9,classic_udp,A,9.9.9.9,1792827982.638099,1792827982.680156,42.057,ok,NOERROR,4,151.101.128.81;151.101.192.81;151.101.0.81;151.101.64.81,1,
+A,lossy,A_lossy_r1_20261024-074554,144,bbc.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827982.681765,1792827982.929641,247.877,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,145,nvidia.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827982.996786,1792827983.241019,244.233,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,146,nvidia.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827983.243354,1792827983.320434,77.079,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,147,nvidia.com,cloudflare,classic_udp,A,1.1.1.1,1792827983.322274,1792827983.357831,35.557,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,148,nvidia.com,google,classic_udp,A,8.8.8.8,1792827983.422882,1792827983.461635,38.753,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,149,nvidia.com,google,doh_cold,A,https://dns.google/dns-query,1792827983.463119,1792827983.721984,258.865,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,150,nvidia.com,google,doh_warm,A,https://dns.google/dns-query,1792827983.72455,1792827983.825008,100.458,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,151,nvidia.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827983.893044,1792827984.126639,233.595,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,152,nvidia.com,quad9,classic_udp,A,9.9.9.9,1792827984.127217,1792827984.164483,37.267,ok,NOERROR,1,34.194.97.138,1,
+A,lossy,A_lossy_r1_20261024-074554,153,nvidia.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827984.16534,1792827984.418719,253.379,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,154,hotstar.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827984.486417,1792827984.743586,257.169,ok,NOERROR,4,3.171.198.14;3.171.198.23;3.171.198.31;3.171.198.80,1,
+A,lossy,A_lossy_r1_20261024-074554,155,hotstar.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827984.745525,1792827984.826262,80.738,ok,NOERROR,4,108.159.28.120;108.159.28.34;108.159.28.105;108.159.28.39,1,
+A,lossy,A_lossy_r1_20261024-074554,156,hotstar.com,cloudflare,classic_udp,A,1.1.1.1,1792827984.827903,1792827984.915439,87.536,ok,NOERROR,4,13.227.249.58;13.227.249.114;13.227.249.22;13.227.249.32,1,
+A,lossy,A_lossy_r1_20261024-074554,157,hotstar.com,google,classic_udp,A,8.8.8.8,1792827984.981393,1792827985.020281,38.888,ok,NOERROR,4,13.227.249.32;13.227.249.58;13.227.249.114;13.227.249.22,1,
+A,lossy,A_lossy_r1_20261024-074554,158,hotstar.com,google,doh_warm,A,https://dns.google/dns-query,1792827985.02141,1792827985.143514,122.104,ok,NOERROR,4,13.227.249.32;13.227.249.114;13.227.249.22;13.227.249.58,1,
+A,lossy,A_lossy_r1_20261024-074554,159,hotstar.com,google,doh_cold,A,https://dns.google/dns-query,1792827985.147037,1792827985.476326,329.29,ok,NOERROR,4,13.227.249.58;13.227.249.22;13.227.249.114;13.227.249.32,1,
+A,lossy,A_lossy_r1_20261024-074554,160,hotstar.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827985.54488,1792827985.824937,280.057,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,161,hotstar.com,quad9,classic_udp,A,9.9.9.9,1792827985.825539,1792827985.865638,40.099,ok,NOERROR,4,13.227.249.22;13.227.249.32;13.227.249.58;13.227.249.114,1,
+A,lossy,A_lossy_r1_20261024-074554,162,hotstar.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827985.866386,1792827986.324279,457.893,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,163,facebook.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827986.387033,1792827986.67369,286.658,ok,NOERROR,1,57.144.40.1,1,
+A,lossy,A_lossy_r1_20261024-074554,164,facebook.com,cloudflare,classic_udp,A,1.1.1.1,1792827986.675656,1792827986.715107,39.451,ok,NOERROR,1,57.144.42.1,1,
+A,lossy,A_lossy_r1_20261024-074554,165,facebook.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827986.716692,1792827986.809973,93.28,ok,NOERROR,1,57.144.54.1,1,
+A,lossy,A_lossy_r1_20261024-074554,166,facebook.com,google,doh_warm,A,https://dns.google/dns-query,1792827986.878325,1792827987.012847,134.522,ok,NOERROR,1,57.144.42.1,1,
+A,lossy,A_lossy_r1_20261024-074554,167,facebook.com,google,classic_udp,A,8.8.8.8,1792827987.01461,1792827987.065465,50.855,ok,NOERROR,1,57.144.42.1,1,
+A,lossy,A_lossy_r1_20261024-074554,168,facebook.com,google,doh_cold,A,https://dns.google/dns-query,1792827987.066634,1792827987.317248,250.614,ok,NOERROR,1,57.144.42.1,1,
+A,lossy,A_lossy_r1_20261024-074554,169,facebook.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827987.384582,1792827987.667659,283.077,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,170,facebook.com,quad9,classic_udp,A,9.9.9.9,1792827987.668732,1792827987.706529,37.797,ok,NOERROR,1,57.144.42.1,1,
+A,lossy,A_lossy_r1_20261024-074554,171,facebook.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827987.708616,1792827987.964409,255.793,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,172,nytimes.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827988.029728,1792827988.121867,92.139,ok,NOERROR,4,151.101.1.164;151.101.129.164;151.101.193.164;151.101.65.164,1,
+A,lossy,A_lossy_r1_20261024-074554,173,nytimes.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827988.125566,1792827988.387122,261.556,ok,NOERROR,4,151.101.65.164;151.101.129.164;151.101.193.164;151.101.1.164,1,
+A,lossy,A_lossy_r1_20261024-074554,174,nytimes.com,cloudflare,classic_udp,A,1.1.1.1,1792827988.39031,1792827988.422981,32.671,ok,NOERROR,4,151.101.193.164;151.101.1.164;151.101.65.164;151.101.129.164,1,
+A,lossy,A_lossy_r1_20261024-074554,175,nytimes.com,google,classic_udp,A,8.8.8.8,1792827988.489097,1792827988.581157,92.06,ok,NOERROR,4,151.101.129.164;151.101.193.164;151.101.1.164;151.101.65.164,1,
+A,lossy,A_lossy_r1_20261024-074554,176,nytimes.com,google,doh_cold,A,https://dns.google/dns-query,1792827988.581923,1792827988.945688,363.765,ok,NOERROR,4,151.101.129.164;151.101.65.164;151.101.1.164;151.101.193.164,1,
+A,lossy,A_lossy_r1_20261024-074554,177,nytimes.com,google,doh_warm,A,https://dns.google/dns-query,1792827988.949691,1792827989.486722,537.031,ok,NOERROR,4,151.101.1.164;151.101.193.164;151.101.65.164;151.101.129.164,1,
+A,lossy,A_lossy_r1_20261024-074554,178,nytimes.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827989.558202,1792827990.02124,463.038,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,179,nytimes.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827990.022263,1792827990.372577,350.314,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,180,nytimes.com,quad9,classic_udp,A,9.9.9.9,1792827990.373209,1792827990.450295,77.086,ok,NOERROR,4,151.101.65.164;151.101.129.164;151.101.193.164;151.101.1.164,1,
+A,lossy,A_lossy_r1_20261024-074554,181,x.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827990.51603,1792827990.732722,216.692,ok,NOERROR,1,162.159.140.229,1,
+A,lossy,A_lossy_r1_20261024-074554,182,x.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827990.733233,1792827990.805255,72.022,ok,NOERROR,1,162.159.140.229,1,
+A,lossy,A_lossy_r1_20261024-074554,183,x.com,cloudflare,classic_udp,A,1.1.1.1,1792827990.805624,1792827990.839991,34.367,ok,NOERROR,1,172.66.0.227,1,
+A,lossy,A_lossy_r1_20261024-074554,184,x.com,google,classic_udp,A,8.8.8.8,1792827990.903253,1792827990.952058,48.805,ok,NOERROR,1,172.66.0.227,1,
+A,lossy,A_lossy_r1_20261024-074554,185,x.com,google,doh_cold,A,https://dns.google/dns-query,1792827990.952502,1792827991.201865,249.363,ok,NOERROR,1,172.66.0.227,1,
+A,lossy,A_lossy_r1_20261024-074554,186,x.com,google,doh_warm,A,https://dns.google/dns-query,1792827991.204282,1792827991.291989,87.706,ok,NOERROR,1,162.159.140.229,1,
+A,lossy,A_lossy_r1_20261024-074554,187,x.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827991.360757,1792827991.72285,362.092,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,188,x.com,quad9,classic_udp,A,9.9.9.9,1792827991.723388,1792827991.770772,47.384,ok,NOERROR,1,172.66.0.227,1,
+A,lossy,A_lossy_r1_20261024-074554,189,x.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827991.772955,1792827992.100817,327.862,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,190,zoom.us,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827992.166132,1792827992.298525,132.392,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,191,zoom.us,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827992.301065,1792827992.654169,353.104,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,192,zoom.us,cloudflare,classic_udp,A,1.1.1.1,1792827992.656452,1792827992.704223,47.772,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,193,zoom.us,google,classic_udp,A,8.8.8.8,1792827992.768599,1792827992.870677,102.078,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,194,zoom.us,google,doh_warm,A,https://dns.google/dns-query,1792827992.871413,1792827992.9736,102.187,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,195,zoom.us,google,doh_cold,A,https://dns.google/dns-query,1792827992.975611,1792827993.222241,246.629,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,196,zoom.us,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827993.290239,1792827993.546888,256.649,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,197,zoom.us,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827993.548979,1792827993.814418,265.439,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,198,zoom.us,quad9,classic_udp,A,9.9.9.9,1792827993.815099,1792827993.873036,57.937,ok,NOERROR,1,170.114.52.2,1,
+A,lossy,A_lossy_r1_20261024-074554,199,microsoft.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827993.939148,1792827994.020701,81.553,ok,NOERROR,1,150.171.109.130,1,
+A,lossy,A_lossy_r1_20261024-074554,200,microsoft.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827994.024055,1792827994.278105,254.049,ok,NOERROR,1,150.171.109.130,1,
+A,lossy,A_lossy_r1_20261024-074554,201,microsoft.com,cloudflare,classic_udp,A,1.1.1.1,1792827994.280396,1792827994.31503,34.634,ok,NOERROR,1,150.171.109.132,1,
+A,lossy,A_lossy_r1_20261024-074554,202,microsoft.com,google,classic_udp,A,8.8.8.8,1792827994.381735,1792827994.420979,39.244,ok,NOERROR,1,150.171.109.132,1,
+A,lossy,A_lossy_r1_20261024-074554,203,microsoft.com,google,doh_cold,A,https://dns.google/dns-query,1792827994.422437,1792827994.981076,558.639,ok,NOERROR,1,150.171.109.132,1,
+A,lossy,A_lossy_r1_20261024-074554,204,microsoft.com,google,doh_warm,A,https://dns.google/dns-query,1792827994.983688,1792827995.095132,111.444,ok,NOERROR,1,150.171.109.132,1,
+A,lossy,A_lossy_r1_20261024-074554,205,microsoft.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827995.161248,1792827995.486947,325.698,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,206,microsoft.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827995.487367,1792827995.88418,396.813,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,207,microsoft.com,quad9,classic_udp,A,9.9.9.9,1792827995.884776,1792827995.92837,43.593,ok,NOERROR,1,150.171.109.132,1,
+A,lossy,A_lossy_r1_20261024-074554,208,cloudflare.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827995.994733,1792827996.270956,276.223,ok,NOERROR,2,104.16.133.229;104.16.132.229,1,
+A,lossy,A_lossy_r1_20261024-074554,209,cloudflare.com,cloudflare,classic_udp,A,1.1.1.1,1792827996.273702,1792827996.335329,61.628,ok,NOERROR,2,104.16.132.229;104.16.133.229,1,
+A,lossy,A_lossy_r1_20261024-074554,210,cloudflare.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827996.336618,1792827996.426123,89.505,ok,NOERROR,2,104.16.133.229;104.16.132.229,1,
+A,lossy,A_lossy_r1_20261024-074554,211,cloudflare.com,google,doh_warm,A,https://dns.google/dns-query,1792827996.493863,1792827996.592682,98.818,ok,NOERROR,2,104.16.133.229;104.16.132.229,1,
+A,lossy,A_lossy_r1_20261024-074554,212,cloudflare.com,google,classic_udp,A,8.8.8.8,1792827996.594913,1792827996.631046,36.133,ok,NOERROR,2,104.16.133.229;104.16.132.229,1,
+A,lossy,A_lossy_r1_20261024-074554,213,cloudflare.com,google,doh_cold,A,https://dns.google/dns-query,1792827996.6332,1792827996.946067,312.867,ok,NOERROR,2,104.16.133.229;104.16.132.229,1,
+A,lossy,A_lossy_r1_20261024-074554,214,cloudflare.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827997.013814,1792827997.305847,292.033,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,215,cloudflare.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827997.307195,1792827997.6763,369.105,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,216,cloudflare.com,quad9,classic_udp,A,9.9.9.9,1792827997.677106,1792827997.71938,42.274,ok,NOERROR,2,104.16.132.229;104.16.133.229,1,
+A,lossy,A_lossy_r1_20261024-074554,217,salesforce.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827997.785227,1792827997.861899,76.672,ok,NOERROR,8,104.109.10.129;104.109.11.129;184.25.179.132;184.31.3.130;184.31.10.133;23.1.35.132;23.1.99.130;23.1.106.133,1,
+A,lossy,A_lossy_r1_20261024-074554,218,salesforce.com,cloudflare,classic_udp,A,1.1.1.1,1792827997.866287,1792827997.911541,45.254,ok,NOERROR,8,23.1.99.130;23.1.106.133;104.109.10.129;104.109.11.129;184.25.179.132;184.31.3.130;184.31.10.133;23.1.35.132,1,
+A,lossy,A_lossy_r1_20261024-074554,219,salesforce.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827997.913601,1792827998.210208,296.607,ok,NOERROR,8,104.109.10.129;104.109.11.129;184.25.179.132;184.31.3.130;184.31.10.133;23.1.35.132;23.1.99.130;23.1.106.133,1,
+A,lossy,A_lossy_r1_20261024-074554,220,salesforce.com,google,classic_udp,A,8.8.8.8,1792827998.277369,1792827998.327019,49.65,ok,NOERROR,8,23.1.35.132;23.1.99.130;23.1.106.133;104.109.10.129;104.109.11.129;184.25.179.132;184.31.3.130;184.31.10.133,1,
+A,lossy,A_lossy_r1_20261024-074554,221,salesforce.com,google,doh_cold,A,https://dns.google/dns-query,1792827998.328721,1792827998.67769,348.969,ok,NOERROR,8,184.31.10.133;23.1.106.133;23.1.35.132;184.31.3.130;184.25.179.132;104.109.11.129;104.109.10.129;23.1.99.130,1,
+A,lossy,A_lossy_r1_20261024-074554,222,salesforce.com,google,doh_warm,A,https://dns.google/dns-query,1792827998.682488,1792827998.835507,153.019,ok,NOERROR,8,23.1.35.132;184.25.179.132;104.109.11.129;104.109.10.129;23.1.99.130;23.1.106.133;184.31.10.133;184.31.3.130,1,
+A,lossy,A_lossy_r1_20261024-074554,223,salesforce.com,quad9,classic_udp,A,9.9.9.9,1792827998.904711,1792827998.957269,52.558,ok,NOERROR,8,184.31.10.133;23.1.35.132;23.1.99.130;23.1.106.133;104.109.10.129;104.109.11.129;184.25.179.132;184.31.3.130,1,
+A,lossy,A_lossy_r1_20261024-074554,224,salesforce.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792827998.95877,1792827999.206871,248.101,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,225,salesforce.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792827999.208287,1792827999.581127,372.84,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,226,google.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792827999.647569,1792827999.900583,253.014,ok,NOERROR,1,142.250.206.142,1,
+A,lossy,A_lossy_r1_20261024-074554,227,google.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792827999.901189,1792827999.974555,73.366,ok,NOERROR,6,142.250.143.101;142.250.143.139;142.250.143.113;142.250.143.100;142.250.143.102;142.250.143.138,1,
+A,lossy,A_lossy_r1_20261024-074554,228,google.com,cloudflare,classic_udp,A,1.1.1.1,1792827999.975197,1792828000.030235,55.038,ok,NOERROR,6,142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102;142.251.126.113;142.251.126.138,1,
+A,lossy,A_lossy_r1_20261024-074554,229,google.com,google,classic_udp,A,8.8.8.8,1792828000.092132,1792828000.128599,36.467,ok,NOERROR,6,142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102;142.251.126.113,1,
+A,lossy,A_lossy_r1_20261024-074554,230,google.com,google,doh_cold,A,https://dns.google/dns-query,1792828000.128976,1792828000.396473,267.497,ok,NOERROR,6,142.251.126.139;142.251.126.102;142.251.126.138;142.251.126.100;142.251.126.113;142.251.126.101,1,
+A,lossy,A_lossy_r1_20261024-074554,231,google.com,google,doh_warm,A,https://dns.google/dns-query,1792828000.398994,1792828000.507125,108.132,ok,NOERROR,6,142.251.126.138;142.251.126.101;142.251.126.139;142.251.126.113;142.251.126.100;142.251.126.102,1,
+A,lossy,A_lossy_r1_20261024-074554,232,google.com,quad9,classic_udp,A,9.9.9.9,1792828000.577168,1792828000.621156,43.988,ok,NOERROR,6,142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102,1,
+A,lossy,A_lossy_r1_20261024-074554,233,google.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828000.621818,1792828000.859629,237.811,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,234,google.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828000.861598,1792828001.218645,357.047,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,235,amazon.in,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828001.285453,1792828001.659218,373.765,ok,NOERROR,3,3.253.176.101;3.253.170.100;3.253.168.43,1,
+A,lossy,A_lossy_r1_20261024-074554,236,amazon.in,cloudflare,classic_udp,A,1.1.1.1,1792828001.660292,1792828001.695526,35.234,ok,NOERROR,3,3.253.176.101;3.253.168.43;3.253.170.100,1,
+A,lossy,A_lossy_r1_20261024-074554,237,amazon.in,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828001.696311,1792828001.769891,73.58,ok,NOERROR,3,3.253.170.100;3.253.168.43;3.253.176.101,1,
+A,lossy,A_lossy_r1_20261024-074554,238,amazon.in,google,doh_cold,A,https://dns.google/dns-query,1792828001.839946,1792828002.084176,244.231,ok,NOERROR,3,3.253.170.100;3.253.168.43;3.253.176.101,1,
+A,lossy,A_lossy_r1_20261024-074554,239,amazon.in,google,doh_warm,A,https://dns.google/dns-query,1792828002.085506,1792828002.187917,102.411,ok,NOERROR,3,3.253.176.101;3.253.170.100;3.253.168.43,1,
+A,lossy,A_lossy_r1_20261024-074554,240,amazon.in,google,classic_udp,A,8.8.8.8,1792828002.19019,1792828002.245589,55.399,ok,NOERROR,3,3.253.170.100;3.253.176.101;3.253.168.43,1,
+A,lossy,A_lossy_r1_20261024-074554,241,amazon.in,quad9,classic_udp,A,9.9.9.9,1792828002.311388,1792828002.374971,63.583,ok,NOERROR,3,3.253.168.43;3.253.170.100;3.253.176.101,1,
+A,lossy,A_lossy_r1_20261024-074554,242,amazon.in,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828002.376305,1792828002.611401,235.096,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,243,amazon.in,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828002.613306,1792828002.857835,244.529,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,244,apple.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828002.924296,1792828003.206937,282.641,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,245,apple.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828003.210133,1792828003.282195,72.062,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,246,apple.com,cloudflare,classic_udp,A,1.1.1.1,1792828003.282567,1792828003.317884,35.317,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,247,apple.com,google,doh_cold,A,https://dns.google/dns-query,1792828003.383313,1792828004.638478,1255.164,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,248,apple.com,google,classic_udp,A,8.8.8.8,1792828004.639063,1792828004.676249,37.186,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,249,apple.com,google,doh_warm,A,https://dns.google/dns-query,1792828004.676444,1792828004.751412,74.968,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,250,apple.com,quad9,classic_udp,A,9.9.9.9,1792828004.816279,1792828004.858376,42.096,ok,NOERROR,1,17.253.144.10,1,
+A,lossy,A_lossy_r1_20261024-074554,251,apple.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828004.859493,1792828005.172607,313.114,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,252,apple.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828005.173241,1792828005.41922,245.979,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,253,paypal.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828005.48445,1792828005.555405,70.955,ok,NOERROR,3,162.159.141.96;151.101.3.1;151.101.195.1,1,
+A,lossy,A_lossy_r1_20261024-074554,254,paypal.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828005.559021,1792828005.807505,248.484,ok,NOERROR,3,162.159.141.96;151.101.3.1;151.101.195.1,1,
+A,lossy,A_lossy_r1_20261024-074554,255,paypal.com,cloudflare,classic_udp,A,1.1.1.1,1792828005.810556,1792828005.844887,34.331,ok,NOERROR,3,162.159.141.96;151.101.3.1;151.101.195.1,1,
+A,lossy,A_lossy_r1_20261024-074554,256,paypal.com,google,doh_cold,A,https://dns.google/dns-query,1792828005.911546,1792828006.146272,234.726,ok,NOERROR,3,162.159.141.96;151.101.3.1;151.101.195.1,1,
+A,lossy,A_lossy_r1_20261024-074554,257,paypal.com,google,classic_udp,A,8.8.8.8,1792828006.147483,1792828006.184775,37.292,ok,NOERROR,3,151.101.195.1;162.159.141.96;151.101.3.1,1,
+A,lossy,A_lossy_r1_20261024-074554,258,paypal.com,google,doh_warm,A,https://dns.google/dns-query,1792828006.185372,1792828006.26423,78.859,ok,NOERROR,3,162.159.141.96;151.101.195.1;151.101.3.1,1,
+A,lossy,A_lossy_r1_20261024-074554,259,paypal.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828006.332351,1792828006.575564,243.213,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,260,paypal.com,quad9,classic_udp,A,9.9.9.9,1792828006.57613,1792828006.60806,31.93,ok,NOERROR,3,151.101.3.1;151.101.195.1;162.159.141.96,1,
+A,lossy,A_lossy_r1_20261024-074554,261,paypal.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828006.608696,1792828006.852242,243.546,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,262,whatsapp.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828006.916373,1792828007.158306,241.933,ok,NOERROR,1,57.144.55.32,1,
+A,lossy,A_lossy_r1_20261024-074554,263,whatsapp.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828007.160826,1792828007.250038,89.212,ok,NOERROR,1,57.144.213.32,1,
+A,lossy,A_lossy_r1_20261024-074554,264,whatsapp.com,cloudflare,classic_udp,A,1.1.1.1,1792828007.251998,1792828007.29492,42.922,ok,NOERROR,1,57.144.43.32,1,
+A,lossy,A_lossy_r1_20261024-074554,265,whatsapp.com,google,doh_warm,A,https://dns.google/dns-query,1792828007.360838,1792828007.460273,99.435,ok,NOERROR,1,57.144.43.32,1,
+A,lossy,A_lossy_r1_20261024-074554,266,whatsapp.com,google,classic_udp,A,8.8.8.8,1792828007.462057,1792828007.517581,55.524,ok,NOERROR,1,57.144.43.32,1,
+A,lossy,A_lossy_r1_20261024-074554,267,whatsapp.com,google,doh_cold,A,https://dns.google/dns-query,1792828007.519067,1792828007.889546,370.479,ok,NOERROR,1,57.144.43.32,1,
+A,lossy,A_lossy_r1_20261024-074554,268,whatsapp.com,quad9,classic_udp,A,9.9.9.9,1792828007.956026,1792828007.995204,39.179,ok,NOERROR,1,57.144.43.32,1,
+A,lossy,A_lossy_r1_20261024-074554,269,whatsapp.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828007.997245,1792828008.252315,255.07,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,270,whatsapp.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828008.25329,1792828008.513599,260.309,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,271,taobao.com,cloudflare,classic_udp,A,1.1.1.1,1792828008.580001,1792828008.619205,39.204,ok,NOERROR,8,59.82.122.165;59.82.43.234;59.82.43.238;59.82.43.239;59.82.44.240;59.82.121.163;59.82.122.130;59.82.122.140,1,
+A,lossy,A_lossy_r1_20261024-074554,272,taobao.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828008.620242,1792828009.267475,647.233,ok,NOERROR,8,59.82.122.130;59.82.121.163;59.82.43.239;59.82.43.234;59.82.44.240;59.82.122.140;59.82.43.238;59.82.122.165,1,
+A,lossy,A_lossy_r1_20261024-074554,273,taobao.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828009.27241,1792828009.352204,79.793,ok,NOERROR,8,59.82.43.239;59.82.122.130;59.82.43.234;59.82.44.240;59.82.122.140;59.82.122.165;59.82.43.238;59.82.121.163,1,
+A,lossy,A_lossy_r1_20261024-074554,274,taobao.com,google,classic_udp,A,8.8.8.8,1792828009.421795,1792828009.473565,51.77,ok,NOERROR,8,59.82.122.140;59.82.122.165;59.82.43.234;59.82.43.238;59.82.43.239;59.82.44.240;59.82.121.163;59.82.122.130,1,
+A,lossy,A_lossy_r1_20261024-074554,275,taobao.com,google,doh_warm,A,https://dns.google/dns-query,1792828009.474162,1792828009.670075,195.913,ok,NOERROR,8,59.82.43.238;59.82.44.240;59.82.122.165;59.82.122.140;59.82.122.130;59.82.43.234;59.82.121.163;59.82.43.239,1,
+A,lossy,A_lossy_r1_20261024-074554,276,taobao.com,google,doh_cold,A,https://dns.google/dns-query,1792828009.67485,1792828009.924946,250.096,ok,NOERROR,8,59.82.43.238;59.82.43.234;59.82.122.165;59.82.122.140;59.82.44.240;59.82.43.239;59.82.122.130;59.82.121.163,1,
+A,lossy,A_lossy_r1_20261024-074554,277,taobao.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828009.993907,1792828010.242363,248.456,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,278,taobao.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828010.243256,1792828010.502108,258.852,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,279,taobao.com,quad9,classic_udp,A,9.9.9.9,1792828010.502272,1792828010.534023,31.751,ok,NOERROR,8,59.82.122.130;59.82.122.140;59.82.122.165;59.82.43.234;59.82.43.238;59.82.43.239;59.82.44.240;59.82.121.163,1,
+A,lossy,A_lossy_r1_20261024-074554,280,flipkart.com,cloudflare,classic_udp,A,1.1.1.1,1792828010.598876,1792828010.637614,38.738,ok,NOERROR,1,103.243.33.77,1,
+A,lossy,A_lossy_r1_20261024-074554,281,flipkart.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828010.638497,1792828010.719153,80.656,ok,NOERROR,1,103.243.33.77,1,
+A,lossy,A_lossy_r1_20261024-074554,282,flipkart.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828010.72201,1792828012.040649,1318.639,ok,NOERROR,1,103.243.33.77,1,
+A,lossy,A_lossy_r1_20261024-074554,283,flipkart.com,google,doh_warm,A,https://dns.google/dns-query,1792828010.539573,1792828010.622697,83.124,ok,NOERROR,1,163.53.77.62,1,
+A,lossy,A_lossy_r1_20261024-074554,284,flipkart.com,google,classic_udp,A,8.8.8.8,1792828010.62456,1792828010.657454,32.894,ok,NOERROR,1,103.243.33.77,1,
+A,lossy,A_lossy_r1_20261024-074554,285,flipkart.com,google,doh_cold,A,https://dns.google/dns-query,1792828010.658856,1792828010.913065,254.209,ok,NOERROR,1,163.53.77.62,1,
+A,lossy,A_lossy_r1_20261024-074554,286,flipkart.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828010.98043,1792828011.24865,268.22,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,287,flipkart.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828011.249674,1792828011.876024,626.35,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,288,flipkart.com,quad9,classic_udp,A,9.9.9.9,1792828011.876598,1792828011.926076,49.477,ok,NOERROR,1,103.243.33.77,1,
+A,lossy,A_lossy_r1_20261024-074554,289,dropbox.com,cloudflare,classic_udp,A,1.1.1.1,1792828011.99238,1792828012.029348,36.967,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,290,dropbox.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828012.031348,1792828012.306255,274.908,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,291,dropbox.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828012.30882,1792828012.381282,72.462,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,292,dropbox.com,google,doh_cold,A,https://dns.google/dns-query,1792828012.450642,1792828012.695277,244.635,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,293,dropbox.com,google,classic_udp,A,8.8.8.8,1792828012.696594,1792828012.740537,43.943,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,294,dropbox.com,google,doh_warm,A,https://dns.google/dns-query,1792828012.741295,1792828012.844582,103.287,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,295,dropbox.com,quad9,classic_udp,A,9.9.9.9,1792828012.912578,1792828012.952492,39.914,ok,NOERROR,1,162.125.248.18,1,
+A,lossy,A_lossy_r1_20261024-074554,296,dropbox.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828012.953372,1792828014.243181,1289.809,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,297,dropbox.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828014.243861,1792828014.487307,243.446,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,298,amazon.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828014.553132,1792828014.627908,74.776,ok,NOERROR,3,98.87.170.71;98.82.161.185;98.87.170.74,1,
+A,lossy,A_lossy_r1_20261024-074554,299,amazon.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828014.631883,1792828014.880751,248.868,ok,NOERROR,3,98.87.170.74;98.82.161.185;98.87.170.71,1,
+A,lossy,A_lossy_r1_20261024-074554,300,amazon.com,cloudflare,classic_udp,A,1.1.1.1,1792828014.883642,1792828014.917356,33.714,ok,NOERROR,3,98.82.161.185;98.87.170.71;98.87.170.74,1,
+A,lossy,A_lossy_r1_20261024-074554,301,amazon.com,google,doh_cold,A,https://dns.google/dns-query,1792828014.984893,1792828015.236008,251.115,ok,NOERROR,3,98.87.170.74;98.87.170.71;98.82.161.185,1,
+A,lossy,A_lossy_r1_20261024-074554,302,amazon.com,google,classic_udp,A,8.8.8.8,1792828015.238828,1792828015.281934,43.107,ok,NOERROR,3,98.87.170.74;98.82.161.185;98.87.170.71,1,
+A,lossy,A_lossy_r1_20261024-074554,303,amazon.com,google,doh_warm,A,https://dns.google/dns-query,1792828015.282901,1792828015.377724,94.823,ok,NOERROR,3,98.87.170.74;98.87.170.71;98.82.161.185,1,
+A,lossy,A_lossy_r1_20261024-074554,304,amazon.com,quad9,classic_udp,A,9.9.9.9,1792828015.445158,1792828015.482428,37.271,ok,NOERROR,3,98.87.170.71;98.87.170.74;98.82.161.185,1,
+A,lossy,A_lossy_r1_20261024-074554,305,amazon.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828015.483548,1792828015.729741,246.192,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,306,amazon.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828015.731842,1792828015.961291,229.449,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,307,naukri.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828016.024292,1792828017.302057,1277.765,ok,NOERROR,2,23.193.114.32;23.193.114.33,1,
+A,lossy,A_lossy_r1_20261024-074554,308,naukri.com,cloudflare,classic_udp,A,1.1.1.1,1792828017.304913,1792828017.338321,33.408,ok,NOERROR,2,23.220.203.208;23.220.203.201,1,
+A,lossy,A_lossy_r1_20261024-074554,309,naukri.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828017.339591,1792828017.419332,79.741,ok,NOERROR,2,23.193.114.32;23.193.114.33,1,
+A,lossy,A_lossy_r1_20261024-074554,310,naukri.com,google,classic_udp,A,8.8.8.8,1792828017.485285,1792828017.524029,38.744,ok,NOERROR,2,23.220.203.201;23.220.203.208,1,
+A,lossy,A_lossy_r1_20261024-074554,311,naukri.com,google,doh_warm,A,https://dns.google/dns-query,1792828017.524528,1792828017.620699,96.171,ok,NOERROR,2,23.220.203.201;23.220.203.208,1,
+A,lossy,A_lossy_r1_20261024-074554,312,naukri.com,google,doh_cold,A,https://dns.google/dns-query,1792828017.623343,1792828017.870711,247.369,ok,NOERROR,2,23.220.203.201;23.220.203.208,1,
+A,lossy,A_lossy_r1_20261024-074554,313,naukri.com,quad9,classic_udp,A,9.9.9.9,1792828017.936754,1792828017.975262,38.509,ok,NOERROR,2,23.220.203.208;23.220.203.201,1,
+A,lossy,A_lossy_r1_20261024-074554,314,naukri.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828017.975733,1792828018.223892,248.16,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,315,naukri.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828018.22573,1792828018.476333,250.603,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,316,oracle.com,cloudflare,classic_udp,A,1.1.1.1,1792828018.541758,1792828018.599775,58.017,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,317,oracle.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828018.601819,1792828019.254382,652.563,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,318,oracle.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828019.257231,1792828019.329284,72.054,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,319,oracle.com,google,doh_cold,A,https://dns.google/dns-query,1792828019.398472,1792828021.100202,1701.729,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,320,oracle.com,google,classic_udp,A,8.8.8.8,1792828021.100965,1792828021.137899,36.933,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,321,oracle.com,google,doh_warm,A,https://dns.google/dns-query,1792828021.138364,1792828021.238749,100.385,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,322,oracle.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828021.307506,1792828021.557283,249.777,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,323,oracle.com,quad9,classic_udp,A,9.9.9.9,1792828021.557852,1792828021.593484,35.632,ok,NOERROR,1,138.1.33.162,1,
+A,lossy,A_lossy_r1_20261024-074554,324,oracle.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828021.595975,1792828022.224736,628.76,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,325,twitch.tv,cloudflare,classic_udp,A,1.1.1.1,1792828022.289949,1792828022.332768,42.819,ok,NOERROR,4,151.101.66.167;151.101.130.167;151.101.194.167;151.101.2.167,1,
+A,lossy,A_lossy_r1_20261024-074554,326,twitch.tv,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828022.334434,1792828022.611468,277.034,ok,NOERROR,4,151.101.130.167;151.101.194.167;151.101.2.167;151.101.66.167,1,
+A,lossy,A_lossy_r1_20261024-074554,327,twitch.tv,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828022.614774,1792828022.706743,91.97,ok,NOERROR,4,151.101.66.167;151.101.2.167;151.101.130.167;151.101.194.167,1,
+A,lossy,A_lossy_r1_20261024-074554,328,twitch.tv,google,classic_udp,A,8.8.8.8,1792828022.776091,1792828022.819409,43.319,ok,NOERROR,4,151.101.2.167;151.101.66.167;151.101.130.167;151.101.194.167,1,
+A,lossy,A_lossy_r1_20261024-074554,329,twitch.tv,google,doh_cold,A,https://dns.google/dns-query,1792828022.821079,1792828023.055196,234.117,ok,NOERROR,4,151.101.194.167;151.101.66.167;151.101.2.167;151.101.130.167,1,
+A,lossy,A_lossy_r1_20261024-074554,330,twitch.tv,google,doh_warm,A,https://dns.google/dns-query,1792828023.058356,1792828023.140488,82.132,ok,NOERROR,4,151.101.2.167;151.101.66.167;151.101.130.167;151.101.194.167,1,
+A,lossy,A_lossy_r1_20261024-074554,331,twitch.tv,quad9,classic_udp,A,9.9.9.9,1792828023.207635,1792828023.247844,40.21,ok,NOERROR,4,151.101.194.167;151.101.2.167;151.101.66.167;151.101.130.167,1,
+A,lossy,A_lossy_r1_20261024-074554,332,twitch.tv,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828023.248167,1792828023.471828,223.661,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,333,twitch.tv,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828023.472495,1792828023.692163,219.668,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,334,youtube.com,cloudflare,classic_udp,A,1.1.1.1,1792828023.755096,1792828023.787886,32.79,ok,NOERROR,4,142.251.106.93;142.251.106.136;142.251.106.190;142.251.106.91,1,
+A,lossy,A_lossy_r1_20261024-074554,335,youtube.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828023.788159,1792828023.866175,78.016,ok,NOERROR,1,172.217.160.206,1,
+A,lossy,A_lossy_r1_20261024-074554,336,youtube.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828023.866941,1792828024.109297,242.356,ok,NOERROR,4,192.178.174.136;192.178.174.93;192.178.174.91;192.178.174.190,1,
+A,lossy,A_lossy_r1_20261024-074554,337,youtube.com,google,doh_warm,A,https://dns.google/dns-query,1792828024.173341,1792828024.272991,99.65,ok,NOERROR,4,142.251.106.91;142.251.106.93;142.251.106.136;142.251.106.190,1,
+A,lossy,A_lossy_r1_20261024-074554,338,youtube.com,google,classic_udp,A,8.8.8.8,1792828024.274786,1792828024.311769,36.983,ok,NOERROR,4,142.251.106.91;142.251.106.93;142.251.106.136;142.251.106.190,1,
+A,lossy,A_lossy_r1_20261024-074554,339,youtube.com,google,doh_cold,A,https://dns.google/dns-query,1792828024.312968,1792828024.55539,242.422,ok,NOERROR,4,142.251.106.136;142.251.106.91;142.251.106.190;142.251.106.93,1,
+A,lossy,A_lossy_r1_20261024-074554,340,youtube.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828024.622153,1792828024.882301,260.148,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,341,youtube.com,quad9,classic_udp,A,9.9.9.9,1792828024.883098,1792828024.925443,42.345,ok,NOERROR,4,142.251.106.190;142.251.106.91;142.251.106.93;142.251.106.136,1,
+A,lossy,A_lossy_r1_20261024-074554,342,youtube.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828024.92612,1792828025.199069,272.948,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,343,spotify.com,cloudflare,classic_udp,A,1.1.1.1,1792828025.262084,1792828025.300945,38.861,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,344,spotify.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828025.301149,1792828025.378676,77.528,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,345,spotify.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828025.379328,1792828025.623037,243.71,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,346,spotify.com,google,doh_cold,A,https://dns.google/dns-query,1792828025.689375,1792828025.941283,251.908,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,347,spotify.com,google,classic_udp,A,8.8.8.8,1792828025.943777,1792828025.996596,52.819,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,348,spotify.com,google,doh_warm,A,https://dns.google/dns-query,1792828025.997396,1792828026.104553,107.156,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,349,spotify.com,quad9,classic_udp,A,9.9.9.9,1792828026.171353,1792828026.214329,42.976,ok,NOERROR,1,35.186.224.24,1,
+A,lossy,A_lossy_r1_20261024-074554,350,spotify.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828026.215383,1792828026.443858,228.475,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,351,spotify.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828026.44535,1792828026.662512,217.162,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,352,live.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828026.729245,1792828026.96473,235.485,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,353,live.com,cloudflare,classic_udp,A,1.1.1.1,1792828026.966699,1792828027.01078,44.082,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,354,live.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828027.011894,1792828027.082596,70.702,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,355,live.com,google,doh_cold,A,https://dns.google/dns-query,1792828027.15149,1792828027.388979,237.49,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,356,live.com,google,classic_udp,A,8.8.8.8,1792828027.391209,1792828027.435261,44.053,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,357,live.com,google,doh_warm,A,https://dns.google/dns-query,1792828027.436047,1792828027.513114,77.067,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,358,live.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828027.582289,1792828027.824054,241.765,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,359,live.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828027.824911,1792828028.090481,265.569,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,360,live.com,quad9,classic_udp,A,9.9.9.9,1792828028.091419,1792828028.13432,42.901,ok,NOERROR,1,204.79.197.212,1,
+A,lossy,A_lossy_r1_20261024-074554,361,cnn.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828028.202615,1792828028.601329,398.714,ok,NOERROR,4,151.101.67.5;151.101.3.5;151.101.195.5;151.101.131.5,1,
+A,lossy,A_lossy_r1_20261024-074554,362,cnn.com,cloudflare,classic_udp,A,1.1.1.1,1792828028.601912,1792828028.638591,36.679,ok,NOERROR,4,151.101.131.5;151.101.195.5;151.101.3.5;151.101.67.5,1,
+A,lossy,A_lossy_r1_20261024-074554,363,cnn.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828028.638952,1792828028.708251,69.299,ok,NOERROR,4,151.101.195.5;151.101.131.5;151.101.3.5;151.101.67.5,1,
+A,lossy,A_lossy_r1_20261024-074554,364,cnn.com,google,doh_warm,A,https://dns.google/dns-query,1792828028.776291,1792828028.912868,136.577,ok,NOERROR,4,151.101.131.5;151.101.3.5;151.101.195.5;151.101.67.5,1,
+A,lossy,A_lossy_r1_20261024-074554,365,cnn.com,google,classic_udp,A,8.8.8.8,1792828028.915048,1792828028.945363,30.316,ok,NOERROR,4,151.101.67.5;151.101.131.5;151.101.195.5;151.101.3.5,1,
+A,lossy,A_lossy_r1_20261024-074554,366,cnn.com,google,doh_cold,A,https://dns.google/dns-query,1792828028.946568,1792828029.305147,358.579,ok,NOERROR,4,151.101.195.5;151.101.3.5;151.101.131.5;151.101.67.5,1,
+A,lossy,A_lossy_r1_20261024-074554,367,cnn.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828029.373686,1792828029.641038,267.352,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,368,cnn.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828029.642449,1792828029.985143,342.694,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,369,cnn.com,quad9,classic_udp,A,9.9.9.9,1792828029.985315,1792828035.052579,5067.264,ok,NOERROR,4,151.101.195.5;151.101.3.5;151.101.67.5;151.101.131.5,2,
+A,lossy,A_lossy_r1_20261024-074554,370,wordpress.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828035.120229,1792828035.632665,512.436,ok,NOERROR,2,192.0.78.17;192.0.78.9,1,
+A,lossy,A_lossy_r1_20261024-074554,371,wordpress.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828035.635423,1792828035.896388,260.966,ok,NOERROR,2,192.0.78.9;192.0.78.17,1,
+A,lossy,A_lossy_r1_20261024-074554,372,wordpress.com,cloudflare,classic_udp,A,1.1.1.1,1792828035.898323,1792828035.943537,45.214,ok,NOERROR,2,192.0.78.17;192.0.78.9,1,
+A,lossy,A_lossy_r1_20261024-074554,373,wordpress.com,google,doh_warm,A,https://dns.google/dns-query,1792828036.008957,1792828036.301278,292.321,ok,NOERROR,2,192.0.78.17;192.0.78.9,1,
+A,lossy,A_lossy_r1_20261024-074554,374,wordpress.com,google,doh_cold,A,https://dns.google/dns-query,1792828036.305078,1792828036.560238,255.159,ok,NOERROR,2,192.0.78.17;192.0.78.9,1,
+A,lossy,A_lossy_r1_20261024-074554,375,wordpress.com,google,classic_udp,A,8.8.8.8,1792828036.562923,1792828036.602107,39.183,ok,NOERROR,2,192.0.78.9;192.0.78.17,1,
+A,lossy,A_lossy_r1_20261024-074554,376,wordpress.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828036.669446,1792828036.921151,251.705,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,377,wordpress.com,quad9,classic_udp,A,9.9.9.9,1792828036.921865,1792828036.962369,40.504,ok,NOERROR,2,192.0.78.17;192.0.78.9,1,
+A,lossy,A_lossy_r1_20261024-074554,378,wordpress.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828036.963584,1792828037.217618,254.034,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,379,office.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828037.284517,1792828037.552416,267.899,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,380,office.com,cloudflare,classic_udp,A,1.1.1.1,1792828037.5546,1792828037.692854,138.254,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,381,office.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828037.693608,1792828037.769966,76.358,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,382,office.com,google,doh_cold,A,https://dns.google/dns-query,1792828037.837926,1792828038.087145,249.219,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,383,office.com,google,classic_udp,A,8.8.8.8,1792828038.08918,1792828038.125488,36.308,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,384,office.com,google,doh_warm,A,https://dns.google/dns-query,1792828038.126442,1792828038.323866,197.424,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,385,office.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828038.392548,1792828038.659325,266.777,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,386,office.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828038.660984,1792828038.908607,247.623,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,387,office.com,quad9,classic_udp,A,9.9.9.9,1792828038.908982,1792828038.945397,36.415,ok,NOERROR,1,13.107.6.156,1,
+A,lossy,A_lossy_r1_20261024-074554,388,tiktok.com,cloudflare,classic_udp,A,1.1.1.1,1792828039.010751,1792828039.148041,137.289,ok,NOERROR,3,104.124.54.19;104.124.54.120;104.124.54.8,1,
+A,lossy,A_lossy_r1_20261024-074554,389,tiktok.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828039.149055,1792828039.35182,202.765,ok,NOERROR,8,23.212.0.117;23.212.0.106;23.212.0.119;23.212.0.108;23.212.0.113;23.212.0.109;23.212.0.116;23.212.0.107,1,
+A,lossy,A_lossy_r1_20261024-074554,390,tiktok.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828039.35581,1792828039.607447,251.638,ok,NOERROR,8,23.212.0.117;23.212.0.106;23.212.0.119;23.212.0.108;23.212.0.113;23.212.0.109;23.212.0.116;23.212.0.107,1,
+A,lossy,A_lossy_r1_20261024-074554,391,tiktok.com,google,classic_udp,A,8.8.8.8,1792828039.676326,1792828039.713864,37.538,ok,NOERROR,3,104.124.54.8;104.124.54.19;104.124.54.120,1,
+A,lossy,A_lossy_r1_20261024-074554,392,tiktok.com,google,doh_cold,A,https://dns.google/dns-query,1792828039.715757,1792828040.05085,335.093,ok,NOERROR,3,104.124.54.120;104.124.54.8;104.124.54.19,1,
+A,lossy,A_lossy_r1_20261024-074554,393,tiktok.com,google,doh_warm,A,https://dns.google/dns-query,1792828040.052897,1792828040.244365,191.468,ok,NOERROR,3,104.124.54.19;104.124.54.120;104.124.54.8,1,
+A,lossy,A_lossy_r1_20261024-074554,394,tiktok.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828040.313894,1792828040.550765,236.871,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,395,tiktok.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828040.551845,1792828040.828066,276.221,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,396,tiktok.com,quad9,classic_udp,A,9.9.9.9,1792828040.82873,1792828040.872277,43.547,ok,NOERROR,3,104.124.54.120;104.124.54.8;104.124.54.19,1,
+A,lossy,A_lossy_r1_20261024-074554,397,yandex.ru,cloudflare,classic_udp,A,1.1.1.1,1792828040.936859,1792828040.973608,36.749,ok,NOERROR,3,77.88.44.55;77.88.55.88;5.255.255.77,1,
+A,lossy,A_lossy_r1_20261024-074554,398,yandex.ru,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828040.973953,1792828041.051789,77.836,ok,NOERROR,3,77.88.55.88;77.88.44.55;5.255.255.77,1,
+A,lossy,A_lossy_r1_20261024-074554,399,yandex.ru,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828041.054574,1792828041.612448,557.873,ok,NOERROR,3,5.255.255.77;77.88.55.88;77.88.44.55,1,
+A,lossy,A_lossy_r1_20261024-074554,400,yandex.ru,google,classic_udp,A,8.8.8.8,1792828041.679967,1792828041.719836,39.868,ok,NOERROR,3,5.255.255.77;77.88.44.55;77.88.55.88,1,
+A,lossy,A_lossy_r1_20261024-074554,401,yandex.ru,google,doh_warm,A,https://dns.google/dns-query,1792828041.720626,1792828041.792604,71.978,ok,NOERROR,3,77.88.44.55;5.255.255.77;77.88.55.88,1,
+A,lossy,A_lossy_r1_20261024-074554,402,yandex.ru,google,doh_cold,A,https://dns.google/dns-query,1792828041.796347,1792828042.054225,257.878,ok,NOERROR,3,5.255.255.77;77.88.55.88;77.88.44.55,1,
+A,lossy,A_lossy_r1_20261024-074554,403,yandex.ru,quad9,classic_udp,A,9.9.9.9,1792828040.521334,1792828040.564623,43.289,ok,NOERROR,3,77.88.55.88;5.255.255.77;77.88.44.55,1,
+A,lossy,A_lossy_r1_20261024-074554,404,yandex.ru,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828040.564954,1792828041.416028,851.075,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,405,yandex.ru,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828041.416395,1792828041.642547,226.152,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,406,intel.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828041.705807,1792828041.799119,93.312,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,407,intel.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828041.801727,1792828043.201325,1399.599,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,408,intel.com,cloudflare,classic_udp,A,1.1.1.1,1792828043.203775,1792828043.275877,72.102,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,409,intel.com,google,classic_udp,A,8.8.8.8,1792828043.342061,1792828043.379051,36.991,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,410,intel.com,google,doh_cold,A,https://dns.google/dns-query,1792828043.380713,1792828043.712327,331.614,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,411,intel.com,google,doh_warm,A,https://dns.google/dns-query,1792828043.715533,1792828043.799409,83.876,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,412,intel.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828043.86733,1792828044.116927,249.597,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,413,intel.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828044.118013,1792828044.368133,250.12,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,414,intel.com,quad9,classic_udp,A,9.9.9.9,1792828044.368626,1792828044.408431,39.805,ok,NOERROR,1,13.91.95.74,1,
+A,lossy,A_lossy_r1_20261024-074554,415,vit.ac.in,cloudflare,classic_udp,A,1.1.1.1,1792828044.472089,1792828044.511547,39.459,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,416,vit.ac.in,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828044.512341,1792828044.61482,102.479,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,417,vit.ac.in,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828044.616815,1792828044.862786,245.972,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,418,vit.ac.in,google,classic_udp,A,8.8.8.8,1792828044.927173,1792828044.967109,39.936,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,419,vit.ac.in,google,doh_cold,A,https://dns.google/dns-query,1792828044.968037,1792828045.224279,256.242,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,420,vit.ac.in,google,doh_warm,A,https://dns.google/dns-query,1792828045.226437,1792828045.330629,104.192,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,421,vit.ac.in,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828045.398048,1792828045.648374,250.325,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,422,vit.ac.in,quad9,classic_udp,A,9.9.9.9,1792828045.648878,1792828045.682846,33.968,ok,NOERROR,1,122.184.65.22,1,
+A,lossy,A_lossy_r1_20261024-074554,423,vit.ac.in,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828045.683652,1792828045.914551,230.899,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,424,instagram.com,cloudflare,classic_udp,A,1.1.1.1,1792828045.977033,1792828046.016139,39.107,ok,NOERROR,1,57.144.42.34,1,
+A,lossy,A_lossy_r1_20261024-074554,425,instagram.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828046.016441,1792828046.24256,226.119,ok,NOERROR,1,57.144.212.34,1,
+A,lossy,A_lossy_r1_20261024-074554,426,instagram.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828046.243147,1792828046.327179,84.033,ok,NOERROR,1,57.144.40.34,1,
+A,lossy,A_lossy_r1_20261024-074554,427,instagram.com,google,doh_warm,A,https://dns.google/dns-query,1792828046.392203,1792828046.472838,80.635,ok,NOERROR,1,57.144.42.34,1,
+A,lossy,A_lossy_r1_20261024-074554,428,instagram.com,google,doh_cold,A,https://dns.google/dns-query,1792828046.475206,1792828046.741268,266.062,ok,NOERROR,1,57.144.42.34,1,
+A,lossy,A_lossy_r1_20261024-074554,429,instagram.com,google,classic_udp,A,8.8.8.8,1792828046.74318,1792828046.788604,45.425,ok,NOERROR,1,57.144.42.34,1,
+A,lossy,A_lossy_r1_20261024-074554,430,instagram.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828046.851997,1792828047.187402,335.404,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,431,instagram.com,quad9,classic_udp,A,9.9.9.9,1792828047.187579,1792828047.225152,37.573,ok,NOERROR,1,57.144.42.34,1,
+A,lossy,A_lossy_r1_20261024-074554,432,instagram.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828047.225389,1792828047.466974,241.585,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,433,linkedin.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828047.531146,1792828047.672243,141.098,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,434,linkedin.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828047.674804,1792828047.926562,251.758,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,435,linkedin.com,cloudflare,classic_udp,A,1.1.1.1,1792828047.928289,1792828047.963428,35.139,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,436,linkedin.com,google,classic_udp,A,8.8.8.8,1792828048.028471,1792828048.064669,36.197,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,437,linkedin.com,google,doh_cold,A,https://dns.google/dns-query,1792828048.066942,1792828048.535192,468.25,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,438,linkedin.com,google,doh_warm,A,https://dns.google/dns-query,1792828048.535839,1792828048.638186,102.346,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,439,linkedin.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828048.703526,1792828048.95289,249.365,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,440,linkedin.com,quad9,classic_udp,A,9.9.9.9,1792828048.953375,1792828049.006756,53.381,ok,NOERROR,1,130.211.32.14,1,
+A,lossy,A_lossy_r1_20261024-074554,441,linkedin.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828049.008062,1792828049.247373,239.311,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,442,samsung.com,cloudflare,classic_udp,A,1.1.1.1,1792828049.31282,1792828049.387362,74.542,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,443,samsung.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792828049.389175,1792828049.652769,263.594,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,444,samsung.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792828049.655698,1792828049.727035,71.337,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,445,samsung.com,google,doh_warm,A,https://dns.google/dns-query,1792828049.792488,1792828049.870456,77.967,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,446,samsung.com,google,classic_udp,A,8.8.8.8,1792828049.871866,1792828049.912712,40.846,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,447,samsung.com,google,doh_cold,A,https://dns.google/dns-query,1792828049.914461,1792828050.135729,221.268,ok,NOERROR,1,211.45.27.231,1,
+A,lossy,A_lossy_r1_20261024-074554,448,samsung.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792828050.198655,1792828050.424132,225.477,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,449,samsung.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792828050.424543,1792828050.652784,228.241,http_505,,0,,1,HTTP Version Not Supported
+A,lossy,A_lossy_r1_20261024-074554,450,samsung.com,quad9,classic_udp,A,9.9.9.9,1792828050.65292,1792828050.687373,34.453,ok,NOERROR,1,211.45.27.231,1,
