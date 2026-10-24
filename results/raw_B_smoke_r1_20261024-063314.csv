@@ -1,0 +1,10 @@
+person,profile,run_id,seq,domain,resolver,method,qtype,server,send_ts,recv_ts,rtt_ms,status,rcode,answer_count,resolved_ips,attempts,error
+B,smoke,B_smoke_r1_20261024-063314,1,youtube.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823594.479618,1792823594.723967,244.349,ok,NOERROR,4,192.178.211.91;192.178.211.136;192.178.211.93;192.178.211.190,1,
+B,smoke,B_smoke_r1_20261024-063314,2,youtube.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823594.725511,1792823594.876579,151.068,ok,NOERROR,1,142.251.220.46,1,
+B,smoke,B_smoke_r1_20261024-063314,3,youtube.com,cloudflare,classic_udp,A,1.1.1.1,1792823594.87728,1792823594.918217,40.937,ok,NOERROR,4,142.251.106.136;142.251.106.190;142.251.106.91;142.251.106.93,1,
+B,smoke,B_smoke_r1_20261024-063314,4,google.com,cloudflare,classic_udp,A,1.1.1.1,1792823594.918897,1792823594.927855,8.958,ok,NOERROR,6,142.251.126.102;142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101,1,
+B,smoke,B_smoke_r1_20261024-063314,5,google.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823594.928446,1792823595.105198,176.753,ok,NOERROR,6,142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.102;142.251.126.101;142.251.126.100,1,
+B,smoke,B_smoke_r1_20261024-063314,6,google.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823595.106506,1792823595.142421,35.915,ok,NOERROR,6,142.251.126.138;142.251.126.113;142.251.126.100;142.251.126.139;142.251.126.101;142.251.126.102,1,
+B,smoke,B_smoke_r1_20261024-063314,7,facebook.com,cloudflare,classic_udp,A,1.1.1.1,1792823595.144172,1792823595.151367,7.195,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-063314,8,facebook.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823595.151648,1792823595.192464,40.816,ok,NOERROR,1,57.144.40.1,1,
+B,smoke,B_smoke_r1_20261024-063314,9,facebook.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823595.193847,1792823595.416211,222.365,ok,NOERROR,1,57.144.212.1,1,
