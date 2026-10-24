@@ -1,0 +1,46 @@
+person,profile,run_id,seq,domain,resolver,method,qtype,server,send_ts,recv_ts,rtt_ms,status,rcode,answer_count,resolved_ips,attempts,error
+B,smoke,B_smoke_r1_20261024-071618,1,facebook.com,cloudflare,classic_udp,A,1.1.1.1,1792826179.430125,1792826179.491741,61.616,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-071618,2,facebook.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792826179.492054,1792826179.767465,275.411,ok,NOERROR,1,57.144.54.1,1,
+B,smoke,B_smoke_r1_20261024-071618,3,facebook.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792826179.768793,1792826179.944414,175.621,ok,NOERROR,1,57.144.40.1,1,
+B,smoke,B_smoke_r1_20261024-071618,4,facebook.com,google,classic_udp,A,8.8.8.8,1792826180.007988,1792826180.013311,5.323,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-071618,5,facebook.com,google,doh_cold,A,https://dns.google/dns-query,1792826180.014024,1792826180.155218,141.194,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-071618,6,facebook.com,google,doh_warm,A,https://dns.google/dns-query,1792826180.156298,1792826180.220469,64.171,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-071618,7,facebook.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792826180.284074,1792826180.402776,118.702,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,8,facebook.com,quad9,classic_udp,A,9.9.9.9,1792826180.403215,1792826180.409029,5.814,ok,NOERROR,1,57.144.42.1,1,
+B,smoke,B_smoke_r1_20261024-071618,9,facebook.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792826180.409648,1792826180.524458,114.81,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,10,apple.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792826180.587188,1792826180.620987,33.799,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,11,apple.com,cloudflare,classic_udp,A,1.1.1.1,1792826180.621695,1792826180.628197,6.502,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,12,apple.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792826180.628889,1792826180.742458,113.57,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,13,apple.com,google,doh_cold,A,https://dns.google/dns-query,1792826180.80595,1792826180.936654,130.704,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,14,apple.com,google,doh_warm,A,https://dns.google/dns-query,1792826180.937991,1792826180.970525,32.534,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,15,apple.com,google,classic_udp,A,8.8.8.8,1792826180.971397,1792826180.977095,5.698,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,16,apple.com,quad9,classic_udp,A,9.9.9.9,1792826181.040344,1792826181.051587,11.243,ok,NOERROR,1,17.253.144.10,1,
+B,smoke,B_smoke_r1_20261024-071618,17,apple.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792826181.052619,1792826181.205334,152.715,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,18,apple.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792826181.205733,1792826181.325954,120.221,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,19,microsoft.com,cloudflare,classic_udp,A,1.1.1.1,1792826181.3884,1792826181.39192,3.519,ok,NOERROR,1,150.171.109.131,1,
+B,smoke,B_smoke_r1_20261024-071618,20,microsoft.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792826181.39225,1792826181.43037,38.12,ok,NOERROR,1,150.171.109.130,1,
+B,smoke,B_smoke_r1_20261024-071618,21,microsoft.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792826181.431687,1792826181.544367,112.68,ok,NOERROR,1,150.171.109.130,1,
+B,smoke,B_smoke_r1_20261024-071618,22,microsoft.com,google,doh_warm,A,https://dns.google/dns-query,1792826181.608633,1792826181.639941,31.307,ok,NOERROR,1,150.171.109.130,1,
+B,smoke,B_smoke_r1_20261024-071618,23,microsoft.com,google,classic_udp,A,8.8.8.8,1792826181.640623,1792826181.64376,3.137,ok,NOERROR,1,150.171.109.131,1,
+B,smoke,B_smoke_r1_20261024-071618,24,microsoft.com,google,doh_cold,A,https://dns.google/dns-query,1792826181.644337,1792826181.750452,106.115,ok,NOERROR,1,150.171.109.130,1,
+B,smoke,B_smoke_r1_20261024-071618,25,microsoft.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792826181.815005,1792826181.951488,136.483,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,26,microsoft.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792826181.952107,1792826182.089566,137.459,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,27,microsoft.com,quad9,classic_udp,A,9.9.9.9,1792826182.089946,1792826182.093655,3.709,ok,NOERROR,1,150.171.109.131,1,
+B,smoke,B_smoke_r1_20261024-071618,28,google.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792826182.156576,1792826182.201592,45.015,ok,NOERROR,6,142.251.126.101;142.251.126.100;142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.102,1,
+B,smoke,B_smoke_r1_20261024-071618,29,google.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792826182.203678,1792826182.355878,152.2,ok,NOERROR,6,142.250.143.100;142.250.143.138;142.250.143.139;142.250.143.101;142.250.143.113;142.250.143.102,1,
+B,smoke,B_smoke_r1_20261024-071618,30,google.com,cloudflare,classic_udp,A,1.1.1.1,1792826182.357076,1792826182.364484,7.408,ok,NOERROR,6,142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102;142.251.126.113,1,
+B,smoke,B_smoke_r1_20261024-071618,31,google.com,google,doh_warm,A,https://dns.google/dns-query,1792826182.427494,1792826182.481999,54.505,ok,NOERROR,6,142.251.126.139;142.251.126.138;142.251.126.101;142.251.126.113;142.251.126.102;142.251.126.100,1,
+B,smoke,B_smoke_r1_20261024-071618,32,google.com,google,doh_cold,A,https://dns.google/dns-query,1792826182.484201,1792826182.597075,112.873,ok,NOERROR,6,142.251.126.113;142.251.126.100;142.251.126.138;142.251.126.102;142.251.126.101;142.251.126.139,1,
+B,smoke,B_smoke_r1_20261024-071618,33,google.com,google,classic_udp,A,8.8.8.8,1792826182.598237,1792826182.602145,3.908,ok,NOERROR,6,142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102,1,
+B,smoke,B_smoke_r1_20261024-071618,34,google.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792826182.664836,1792826182.786222,121.386,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,35,google.com,quad9,classic_udp,A,9.9.9.9,1792826182.786906,1792826182.799155,12.25,ok,NOERROR,6,142.251.126.102;142.251.126.113;142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101,1,
+B,smoke,B_smoke_r1_20261024-071618,36,google.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792826182.799734,1792826182.937971,138.237,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,37,youtube.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792826183.000935,1792826183.132854,131.919,ok,NOERROR,1,142.251.220.46,1,
+B,smoke,B_smoke_r1_20261024-071618,38,youtube.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792826183.133903,1792826183.17016,36.257,ok,NOERROR,1,142.251.220.46,1,
+B,smoke,B_smoke_r1_20261024-071618,39,youtube.com,cloudflare,classic_udp,A,1.1.1.1,1792826183.171071,1792826183.203729,32.658,ok,NOERROR,4,142.251.106.190;142.251.106.91;142.251.106.93;142.251.106.136,1,
+B,smoke,B_smoke_r1_20261024-071618,40,youtube.com,google,doh_cold,A,https://dns.google/dns-query,1792826183.265363,1792826183.412061,146.698,ok,NOERROR,4,142.251.106.91;142.251.106.190;142.251.106.93;142.251.106.136,1,
+B,smoke,B_smoke_r1_20261024-071618,41,youtube.com,google,classic_udp,A,8.8.8.8,1792826183.41312,1792826183.416276,3.155,ok,NOERROR,4,142.251.106.136;142.251.106.190;142.251.106.91;142.251.106.93,1,
+B,smoke,B_smoke_r1_20261024-071618,42,youtube.com,google,doh_warm,A,https://dns.google/dns-query,1792826183.416449,1792826183.473364,56.915,ok,NOERROR,4,142.251.106.136;142.251.106.91;142.251.106.190;142.251.106.93,1,
+B,smoke,B_smoke_r1_20261024-071618,43,youtube.com,quad9,doh_warm,A,https://dns.quad9.net/dns-query,1792826183.535219,1792826183.664214,128.995,http_505,,0,,1,HTTP Version Not Supported
+B,smoke,B_smoke_r1_20261024-071618,44,youtube.com,quad9,classic_udp,A,9.9.9.9,1792826183.664446,1792826183.667496,3.05,ok,NOERROR,4,142.251.106.93;142.251.106.136;142.251.106.190;142.251.106.91,1,
+B,smoke,B_smoke_r1_20261024-071618,45,youtube.com,quad9,doh_cold,A,https://dns.quad9.net/dns-query,1792826183.667938,1792826183.779912,111.973,http_505,,0,,1,HTTP Version Not Supported

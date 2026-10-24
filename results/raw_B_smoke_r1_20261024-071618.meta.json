@@ -1,0 +1,31 @@
+{
+  "run_id": "B_smoke_r1_20261024-071618",
+  "args": {
+    "person": "B",
+    "profile": "smoke",
+    "repeats": 1,
+    "seed": 42,
+    "domains": "/home/mahi/doh-measurement-project/results/domains.csv",
+    "resolvers": "/home/mahi/doh-measurement-project/client/resolvers.yaml",
+    "only": null,
+    "limit": 5,
+    "qtype": "A",
+    "timeout": 5.0,
+    "udp_retries": 2,
+    "http2": false,
+    "pause": 0.02,
+    "out_dir": "/home/mahi/doh-measurement-project/results"
+  },
+  "queries_written": 45,
+  "status_counts": {
+    "ok": 35,
+    "http_505": 10
+  },
+  "interrupted": false,
+  "started_epoch": 1792826178.7892518,
+  "finished_epoch": 1792826183.8412108,
+  "python": "3.14.4",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "dnspython": "2.9.0",
+  "httpx": "0.28.1"
+}
