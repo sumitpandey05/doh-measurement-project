@@ -37,7 +37,7 @@ def find_csvs(path) -> list[Path]:
     p = Path(path)
     if p.is_file():
         return [p]
-    files = sorted(p.rglob("*.csv"))
+    files = sorted(f for f in p.rglob("*.csv") if f.stat().st_size > 0)
     if not files:
         raise FileNotFoundError(f"no CSV files under {p} - download the dataset into that folder (see README)")
     return files
