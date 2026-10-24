@@ -1,0 +1,18 @@
+{
+  "model": "xgboost",
+  "n_test": 53860,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "roc_auc": 1.0,
+  "false_positive_rate": 0.0,
+  "tn": 3949,
+  "fp": 0,
+  "fn": 0,
+  "tp": 49911,
+  "seed": 42,
+  "balanced": false,
+  "fit_seconds": 2.93,
+  "n_train": 215439
+}
