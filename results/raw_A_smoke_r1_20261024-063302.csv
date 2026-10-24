@@ -1,0 +1,10 @@
+person,profile,run_id,seq,domain,resolver,method,qtype,server,send_ts,recv_ts,rtt_ms,status,rcode,answer_count,resolved_ips,attempts,error
+A,smoke,A_smoke_r1_20261024-063302,1,youtube.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823582.890018,1792823583.197478,307.46,ok,NOERROR,1,142.251.220.46,1,
+A,smoke,A_smoke_r1_20261024-063302,2,youtube.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823583.200679,1792823583.253582,52.903,ok,NOERROR,4,192.178.174.190;192.178.174.136;192.178.174.93;192.178.174.91,1,
+A,smoke,A_smoke_r1_20261024-063302,3,youtube.com,cloudflare,classic_udp,A,1.1.1.1,1792823583.256177,1792823583.338159,81.983,ok,NOERROR,4,142.251.106.190;142.251.106.91;142.251.106.93;142.251.106.136,1,
+A,smoke,A_smoke_r1_20261024-063302,4,google.com,cloudflare,classic_udp,A,1.1.1.1,1792823583.339304,1792823583.386832,47.527,ok,NOERROR,6,142.251.126.138;142.251.126.139;142.251.126.100;142.251.126.101;142.251.126.102;142.251.126.113,1,
+A,smoke,A_smoke_r1_20261024-063302,5,google.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823583.388468,1792823583.722792,334.324,ok,NOERROR,6,142.251.126.138;142.251.126.113;142.251.126.100;142.251.126.139;142.251.126.101;142.251.126.102,1,
+A,smoke,A_smoke_r1_20261024-063302,6,google.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823583.72755,1792823583.771159,43.609,ok,NOERROR,6,142.250.143.113;142.250.143.101;142.250.143.139;142.250.143.138;142.250.143.100;142.250.143.102,1,
+A,smoke,A_smoke_r1_20261024-063302,7,facebook.com,cloudflare,classic_udp,A,1.1.1.1,1792823583.774915,1792823583.816433,41.518,ok,NOERROR,1,57.144.42.1,1,
+A,smoke,A_smoke_r1_20261024-063302,8,facebook.com,cloudflare,doh_warm,A,https://cloudflare-dns.com/dns-query,1792823583.817211,1792823583.872962,55.75,ok,NOERROR,1,57.144.212.1,1,
+A,smoke,A_smoke_r1_20261024-063302,9,facebook.com,cloudflare,doh_cold,A,https://cloudflare-dns.com/dns-query,1792823583.875417,1792823585.934867,2059.449,ok,NOERROR,1,57.144.40.1,1,
