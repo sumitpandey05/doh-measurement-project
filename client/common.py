@@ -10,10 +10,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import dns.message
-import dns.rcode
-import dns.rdatatype
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # One row of the raw measurement CSV. Order matters (it is the CSV header).
@@ -36,13 +32,18 @@ RAW_COLUMNS = [
     "resolved_ips",  # A/AAAA addresses returned, ';' separated
     "attempts",      # UDP attempts used (1 unless --udp-retries is set)
     "error",         # short error text if status != ok
+    "http_version",  # DoH only: HTTP/1.1 or HTTP/2 actually negotiated
 ]
+
+OPTIONAL_COLUMNS = ["http_version"]
 
 METHODS = ("classic_udp", "doh_cold", "doh_warm")
 
 
-def build_query(domain: str, qtype: str = "A", qid: int | None = None) -> dns.message.Message:
+def build_query(domain: str, qtype: str = "A", qid: int | None = None):
     """Build the DNS question. Same EDNS0 options for classic DNS and DoH."""
+    import dns.message
+
     return dns.message.make_query(domain, qtype, use_edns=0, payload=1232, id=qid)
 
 
@@ -52,7 +53,7 @@ def short_error(exc: BaseException | None) -> str:
     return f"{type(exc).__name__}: {exc}".replace("\n", " ")[:200]
 
 
-def make_result(status, send_ts, t0, t1, msg=None, error="", attempts=1) -> dict:
+def make_result(status, send_ts, t0, t1, msg=None, error="", attempts=1, http_version="") -> dict:
     """Common result dict returned by every query function.
 
     t0/t1 are time.perf_counter() values; recv_ts is derived from them so that
@@ -69,8 +70,12 @@ def make_result(status, send_ts, t0, t1, msg=None, error="", attempts=1) -> dict
         "resolved_ips": "",
         "attempts": attempts,
         "error": error,
+        "http_version": http_version,
     }
     if msg is not None:
+        import dns.rcode
+        import dns.rdatatype
+
         ips = []
         for rrset in msg.answer:
             if rrset.rdtype in (dns.rdatatype.A, dns.rdatatype.AAAA):

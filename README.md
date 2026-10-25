@@ -154,7 +154,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # 3. verify
-pytest -q                                 # expected: 20 passed
+pytest -q                                 # expected: 22 passed
 tshark --version && tc -V
 ```
 
@@ -196,7 +196,8 @@ python client/run_batch.py --person A --limit 5 --only cloudflare   # quick smok
 | `--repeats N` | independent repetitions (one CSV each) |
 | `--udp-retries N` | extra UDP attempts after a timeout. **Use the same value in every run** (recommended: 2) |
 | `--only NAME…` / `--limit N` | restrict resolvers / domains |
-| `--http2` | DoH over HTTP/2 |
+| `--http1` | force DoH over HTTP/1.1 (default is HTTP/2; Quad9 rejects HTTP/1.1 with 505 since Dec 2025) |
+| `--udp-timeout` | seconds to wait per UDP attempt before a retry (default 2) |
 | `--seed` | seed for shuffling domain and method order (reproducible) |
 
 One repetition = 50 domains × 3 resolvers × 3 methods = **450 queries** (about 2–4 min on a clean link). Each run writes `results/raw_<person>_<profile>_r<k>_<time>.csv` plus a `.meta.json` (arguments, library versions, platform).
@@ -259,13 +260,17 @@ python ml/run_seeds.py    --data ml/data --seeds 42 43 44 45 46     # mean ± st
 python ml/cross_resolver_test.py --model ml/artifacts/rf_seed42.joblib \
     --own results/own_flows_A.csv results/own_flows_B.csv --train-data ml/data
 
+python ml/generalization.py --data ml/data --seed 42    # dedup / time-ordered / unseen-tool tests
+
 python ml/make_comparison_table.py --init           # then fill results/prior_work.csv by hand
 python ml/make_comparison_table.py                  # → CSV + LaTeX table
 ```
 
 No dataset yet? `python tests/make_synthetic_dataset.py --out ml/data_synthetic` creates **fake** data to dry-run the pipeline. **Never report results from it.**
 
-### 8.5 Analyse — `notebooks/`
+### 8.5 Analyse — `notebooks/` and `analysis/`
+
+`python analysis/paper_figures.py` rebuilds every measurement figure and table used in the paper (medians, bootstrap CIs, paired differences) into `results/paper/`.
 
 Open in Jupyter or VS Code; each notebook locates the repository root itself.
 
@@ -316,7 +321,7 @@ Open in Jupyter or VS Code; each notebook locates the repository root itself.
 ## 11. Testing
 
 ```bash
-pytest -q          # 20 tests, about 15 s, no internet needed
+pytest -q          # 22 tests, about 15 s, no internet needed
 ```
 
 The tests run against local mock DNS/DoH servers (plain HTTP and real TLS) and synthetic data. They check, among others: warm sessions reuse one connection while cold sessions open a new one each time; failures are recorded as rows, not crashes; flow features match a hand calculation (including the Ethernet-padding trap); the privacy audit sees plaintext but not TLS; the train/test split and manifests are byte-identical across runs.
@@ -340,7 +345,7 @@ State these in the paper.
 
 | Verified (automated, in a Linux sandbox) | To be confirmed on your machines |
 |---|---|
-| All code paths and 20 tests (mock servers, real TLS, real tshark capture on loopback, flow features, privacy audit, deterministic split, both models, multi-seed, cross-resolver, comparison table) | Real Cloudflare / Google / Quad9 measurements |
+| All code paths and 22 tests (mock servers, real TLS, real tshark capture on loopback, flow features, privacy audit, deterministic split, both models, multi-seed, cross-resolver, comparison table) | Real Cloudflare / Google / Quad9 measurements |
 | Client-vs-wire RTT gap of about 0.6 ms on a real capture | `tc netem` actually shaping traffic (`ping` check, §8.2) |
 | All five notebooks execute end-to-end | The real dataset's exact file names and labels (`load_dataset.py` reports mismatches) |
 | netem scripts always clean up (stub `tc`; success, failure and Ctrl-C) | Tranco download (`--list-id`); WSL2 specifics |
@@ -353,6 +358,8 @@ State these in the paper.
 | Empty pcap | wrong interface or filter → `--interface eth0`; remember DoH is port **443** |
 | Every UDP query times out | network blocks UDP/53 → try a phone hotspot; note it as a finding |
 | `http_400` on DoH | wrong endpoint → use `/dns-query` (not Google's JSON `/resolve`) |
+| `http_505` on Quad9 DoH | HTTP/1.1 is no longer accepted by Quad9 → use the default HTTP/2 (do not pass `--http1`); `pip install 'httpx[http2]'` |
+| `git pull`: *SSL certificate verification failed: certificate signer not trusted* | WSL does not trust the certificate shown by your network (antivirus / campus proxy that inspects HTTPS) → `sudo apt install --reinstall ca-certificates && sudo update-ca-certificates`; if it still fails, export that proxy's root certificate from Windows, copy it to `/usr/local/share/ca-certificates/<name>.crt` and run `sudo update-ca-certificates` again. Never set `http.sslVerify false`. |
 | `Specified qdisc kind is unknown` | kernel lacks netem → WSL: `wsl --update` then `wsl --shutdown` |
 | Everything is slow after an experiment | a netem rule was left behind → `bash netem/clear_condition.sh` |
 | `domains.csv not found` | run `python client/domain_list.py` |

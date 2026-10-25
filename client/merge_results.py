@@ -15,13 +15,16 @@ from pathlib import Path
 
 import pandas as pd
 
-from common import RAW_COLUMNS, REPO_ROOT
+from common import OPTIONAL_COLUMNS, RAW_COLUMNS, REPO_ROOT
 
 
 def merge(results_dir: Path) -> tuple[pd.DataFrame, list[str]]:
     frames, problems = [], []
     for p in sorted(results_dir.glob("raw_*.csv")):
         df = pd.read_csv(p)
+        for col in OPTIONAL_COLUMNS:  # added later; older files simply do not have them
+            if col not in df.columns:
+                df[col] = ""
         if set(df.columns) != set(RAW_COLUMNS):
             problems.append(f"{p.name}: columns differ (missing {sorted(set(RAW_COLUMNS) - set(df.columns))}, "
                             f"extra {sorted(set(df.columns) - set(RAW_COLUMNS))})")
