@@ -190,13 +190,28 @@ def test_flow_features_match_hand_calculation(tmp_path):
     r = df.iloc[0]
     assert r.SourceIP == "10.0.0.2" and r.DestinationIP == "1.1.1.1" and r.DestinationPort == 443
     assert r.Duration == pytest.approx(0.09, abs=1e-4)
-    assert r.FlowBytesSent == 40 + 40 + 140 + 40       # SYN-less: ack, data(100+40), ack, first pkt
-    assert r.FlowBytesReceived == 40 + 340
-    assert r.FlowSentRate == pytest.approx(260 / 0.09, rel=1e-3)
-    assert r.PacketLengthMean == pytest.approx((40 * 4 + 140 + 340) / 6)
-    assert r.PacketLengthMedian == 40 and r.PacketLengthMode == 40
-    assert r.ResponseTimeTimeMean == pytest.approx(0.05, abs=1e-4)   # request@0.03 -> answer@0.08
-    assert r.PacketTimeMean == pytest.approx(0.018, abs=1e-4)
+    # frame length = IP length + 14 (Ethernet), padding NOT counted
+    assert r.FlowBytesSent == 54 + 54 + 154 + 54
+    assert r.FlowBytesReceived == 54 + 354
+    assert r.FlowSentRate == pytest.approx(316 / 0.09, rel=1e-3)
+    assert r.PacketLengthMean == pytest.approx((54 * 4 + 154 + 354) / 6)
+    assert r.PacketLengthMedian == 54 and r.PacketLengthMode == 54
+    # DoHMeter response time: every client packet directly followed by a server packet
+    assert r.ResponseTimeTimeMean == pytest.approx((0.01 + 0.05) / 2, abs=1e-4)
+    # DoHMeter packet time: time since the first packet of the flow
+    assert r.PacketTimeMean == pytest.approx((0 + .01 + .02 + .03 + .08 + .09) / 6, abs=1e-4)
+    m, med, sd = r.PacketLengthMean, r.PacketLengthMedian, r.PacketLengthStandardDeviation
+    assert r.PacketLengthSkewFromMedian == pytest.approx(3 * (m - med) / sd)
+
+
+def test_flow_feature_sentinels_match_dohmeter():
+    from pcap_to_csv import Flow, flow_features
+
+    fl = Flow("10.0.0.2", 40000, "1.1.1.1", 443, ts=[0.0, 0.0, 0.0], length=[54, 54, 54],
+              c2s=[True, False, True], has_data=[False, False, False])
+    f = flow_features(fl)
+    assert f["FlowSentRate"] == -1 and f["FlowReceivedRate"] == -1          # duration 0
+    assert f["PacketLengthSkewFromMedian"] == -10 and f["PacketLengthSkewFromMode"] == -10   # std 0
 
 
 def test_flows_are_labelled_by_resolver_via_port_and_ip():
@@ -368,3 +383,21 @@ def test_privacy_audit_sees_plaintext_but_not_tls(tmp_path):
     assert t.loc["classic_dns", "domains_visible_to_observer"] == 1 and t.loc["classic_dns", "exposure_rate"] == 0.5
     assert t.loc["doh", "domains_visible_to_observer"] == 0
     assert sni == ["cloudflare-dns.com"]
+
+
+def test_generalization_script_with_tool_files(synthetic, tmp_path):
+    d = tmp_path / "data"
+    d.mkdir()
+    for f in synthetic.glob("*.csv"):
+        (d / f.name).write_bytes(f.read_bytes())
+    mal = pd.read_csv(synthetic / "l2-malicious.csv")
+    for i, t in enumerate(("dns2tcp", "dnscat2", "iodine")):
+        mal.iloc[i::3].to_csv(d / f"l3-{t}.csv", index=False)
+    from load_dataset import find_csvs
+    assert {f.name for f in find_csvs(d)} == {"l2-benign.csv", "l2-malicious.csv"}, "l3 files must not be double counted"
+    r = subprocess.run([PY, str(ROOT / "ml/generalization.py"), "--data", str(d), "--models", "rf",
+                        "--results", str(tmp_path)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+    g = pd.read_csv(tmp_path / "ml_generalization.csv")
+    assert {"random", "dedup", "temporal", "unseen_tool=iodine"} <= set(g.setting)
+    assert g[["mcc", "pr_auc", "balanced_accuracy"]].notna().all().all()

@@ -33,14 +33,32 @@ def norm(name) -> str:
     return re.sub(r"[^a-z0-9]", "", str(name).lower())
 
 
+TOOLS = ("dns2tcp", "dnscat2", "iodine")
+
+
 def find_csvs(path) -> list[Path]:
+    """Layer-2 files only. If the folder also holds the Layer-1 (l1-*) or the per-tool
+    Layer-3 (l3-*) files they are skipped: Layer-3 is the SAME malicious traffic split by
+    tool, so loading it next to l2-malicious.csv would count every malicious flow twice."""
     p = Path(path)
     if p.is_file():
         return [p]
     files = sorted(f for f in p.rglob("*.csv") if f.stat().st_size > 0)
+    files = [f for f in files if not f.name.lower().startswith(("l1-", "l3-"))
+             and not any(t in f.name.lower() for t in TOOLS)]
     if not files:
         raise FileNotFoundError(f"no CSV files under {p} - download the dataset into that folder (see README)")
     return files
+
+
+def find_tool_csvs(path) -> dict:
+    """Per-tool malicious files (Layer 3), e.g. l3-dns2tcp.csv -> {'dns2tcp': Path}."""
+    out = {}
+    for f in sorted(Path(path).rglob("*.csv")):
+        for t in TOOLS:
+            if t in f.name.lower():
+                out[t] = f
+    return out
 
 
 def load_flows(paths) -> pd.DataFrame:
@@ -61,8 +79,10 @@ def label_column(df: pd.DataFrame) -> str:
     raise ValueError("no 'Label' column found")
 
 
-def prepare(df: pd.DataFrame):
-    """Return (X, y, info). X = numeric feature DataFrame, y = 0/1 numpy array."""
+def prepare(df: pd.DataFrame, with_meta: bool = False):
+    """Return (X, y, info). X = numeric feature DataFrame, y = 0/1 numpy array.
+    with_meta=True adds a 4th item: identifier columns + source file of the kept rows
+    (never used as features - only for grouping, e.g. time-ordered splits)."""
     lab = label_column(df)
     raw = df[lab].astype(str).str.strip().str.lower()
     unknown = sorted(set(raw.unique()) - set(LABEL_MAP))
@@ -80,6 +100,10 @@ def prepare(df: pd.DataFrame):
     keep = X.notna().all(axis=1).to_numpy()
     info = {"rows_loaded": int(len(df)), "rows_dropped_nan_inf": int((~keep).sum()),
             "dropped_all_nan_columns": all_nan, "feature_columns": list(X.columns)}
+    if with_meta:
+        meta_cols = [c for c in df.columns if norm(c) in ID_COLUMNS_NORM or c.startswith("_")]
+        meta = df.loc[keep, meta_cols].reset_index(drop=True)
+        return X[keep].reset_index(drop=True), y_all[keep], info, meta
     return X[keep].reset_index(drop=True), y_all[keep], info
 
 

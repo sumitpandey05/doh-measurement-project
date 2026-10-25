@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
 
 
 def build_rf(seed: int = 42, n_estimators: int = 200, balance: bool = False, n_jobs: int = -1):
@@ -14,6 +13,8 @@ def build_rf(seed: int = 42, n_estimators: int = 200, balance: bool = False, n_j
 
 def build_xgb(seed: int = 42, y_train=None, n_estimators: int = 300, balance: bool = False, n_jobs: int = -1):
     """XGBoost. balance=True sets scale_pos_weight = negatives / positives."""
+    from xgboost import XGBClassifier  # imported here so RF-only scripts work without xgboost
+
     spw = 1.0
     if balance and y_train is not None:
         pos = max(int(np.sum(y_train)), 1)

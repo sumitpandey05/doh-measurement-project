@@ -22,7 +22,8 @@ from models import build_rf, build_xgb
 from preprocess import split_prepared
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-METRICS = ["accuracy", "precision", "recall", "f1", "roc_auc", "false_positive_rate"]
+METRICS = ["accuracy", "precision", "recall", "f1", "roc_auc", "false_positive_rate",
+           "balanced_accuracy", "mcc", "pr_auc"]
 
 
 def main() -> None:

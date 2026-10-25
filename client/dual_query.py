@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import random
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
@@ -62,17 +63,25 @@ def load_resolvers(path, only=None) -> list[Resolver]:
 class SessionPool:
     """One warm (reused) and one cold (fresh-connection) DoH session per resolver."""
 
-    def __init__(self, resolvers, timeout: float = 5.0, http2: bool = False):
+    def __init__(self, resolvers, timeout: float = 5.0, http2: bool = True):
         self.warm = {r.name: DoHSession(r.doh_url, reuse=True, timeout=timeout, http2=http2,
                                         verify=r.tls_verify) for r in resolvers}
         self.cold = {r.name: DoHSession(r.doh_url, reuse=False, timeout=timeout, http2=http2,
                                         verify=r.tls_verify) for r in resolvers}
 
-    def prime(self, probe_domain: str = "example.com") -> None:
+    def prime(self, probe_domain: str = "example.com") -> dict:
         """Open each warm connection with one UNLOGGED query so the handshake is not
-        counted in the first doh_warm row."""
-        for session in self.warm.values():
-            session.query(probe_domain)
+        counted in the first doh_warm row. Returns name -> probe result and warns loudly
+        if a resolver's DoH endpoint does not work at all (e.g. HTTP 505 = wrong HTTP
+        version), so a broken resolver is noticed before 450 rows are written."""
+        probes = {}
+        for name, session in self.warm.items():
+            r = session.query(probe_domain)
+            probes[name] = r
+            if r["status"] != "ok":
+                print(f"[warn] DoH probe to {name} failed: {r['status']} {r['error']} "
+                      f"(http_version={r.get('http_version') or '?'})", file=sys.stderr)
+        return probes
 
     def close(self) -> None:
         for s in list(self.warm.values()) + list(self.cold.values()):
@@ -80,12 +89,14 @@ class SessionPool:
 
 
 def run_method(method: str, domain: str, resolver: Resolver, pool: SessionPool,
-               qtype: str = "A", timeout: float = 5.0, udp_retries: int = 0):
-    """Run ONE method; returns (server_label, result_dict)."""
+               qtype: str = "A", timeout: float = 5.0, udp_retries: int = 0,
+               udp_timeout: float | None = None):
+    """Run ONE method; returns (server_label, result_dict).
+    udp_timeout = wait per UDP attempt before a retry (defaults to `timeout`)."""
     if method == "classic_udp":
         return resolver.classic_ip, query_classic(domain, resolver.classic_ip, qtype,
                                                   port=resolver.classic_port,
-                                                  timeout=timeout, retries=udp_retries)
+                                                  timeout=udp_timeout or timeout, retries=udp_retries)
     if method == "doh_cold":
         return resolver.doh_url, pool.cold[resolver.name].query(domain, qtype)
     if method == "doh_warm":
@@ -94,7 +105,7 @@ def run_method(method: str, domain: str, resolver: Resolver, pool: SessionPool,
 
 
 def measure(domain, resolver, pool, qtype="A", timeout=5.0, udp_retries=0,
-            rng: random.Random | None = None, methods=METHODS):
+            rng: random.Random | None = None, methods=METHODS, udp_timeout: float | None = None):
     """Run every method once for (domain, resolver). The order is shuffled when an
     rng is given, so no method is systematically first (and so hits a cold cache)."""
     order = list(methods)
@@ -102,7 +113,7 @@ def measure(domain, resolver, pool, qtype="A", timeout=5.0, udp_retries=0,
         rng.shuffle(order)
     rows = []
     for m in order:
-        server, res = run_method(m, domain, resolver, pool, qtype, timeout, udp_retries)
+        server, res = run_method(m, domain, resolver, pool, qtype, timeout, udp_retries, udp_timeout)
         rows.append((m, server, res))
     return rows
 
@@ -114,18 +125,19 @@ def main() -> None:
     ap.add_argument("--only", nargs="*", help="resolver names to use, e.g. cloudflare")
     ap.add_argument("--timeout", type=float, default=5.0)
     ap.add_argument("--udp-retries", type=int, default=0)
-    ap.add_argument("--http2", action="store_true")
+    ap.add_argument("--http1", action="store_true", help="force HTTP/1.1 for DoH (default HTTP/2)")
     a = ap.parse_args()
 
     resolvers = load_resolvers(a.resolvers, a.only)
-    pool = SessionPool(resolvers, a.timeout, a.http2)
+    pool = SessionPool(resolvers, a.timeout, not a.http1)
     try:
         pool.prime()
-        print(f"{'resolver':<11}{'method':<13}{'status':<10}{'rtt_ms':>9}  ips")
+        print(f"{'resolver':<11}{'method':<13}{'status':<10}{'rtt_ms':>9}  {'http':<9}ips")
         for r in resolvers:
             for m, _server, res in measure(a.domain, r, pool, timeout=a.timeout,
                                            udp_retries=a.udp_retries):
-                print(f"{r.name:<11}{m:<13}{res['status']:<10}{res['rtt_ms']:>9.1f}  {res['resolved_ips'][:40]}")
+                print(f"{r.name:<11}{m:<13}{res['status']:<10}{res['rtt_ms']:>9.1f}  "
+                      f"{res.get('http_version') or '-':<9}{res['resolved_ips'][:40]}")
     finally:
         pool.close()
 

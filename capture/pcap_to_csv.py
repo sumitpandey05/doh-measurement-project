@@ -13,14 +13,24 @@ Usage (from the repo root):
     python capture/pcap_to_csv.py packets capture/pcaps/x.pcap --out results/x_packets.csv
     python capture/pcap_to_csv.py udp-rtt capture/pcaps/x.pcap --out results/x_udp_rtt.csv
 
-Feature definitions are our APPROXIMATION of the dataset's (CICFlowMeter-based) ones:
-  * packet length = IP packet size in bytes (headers included, link-layer excluded)
-  * PacketTime    = gaps between consecutive packets of the flow
-  * ResponseTime  = gap between a client packet carrying data and the next server
-                    packet carrying data
-  * variance      = population variance (ddof=0); mode = smallest most-frequent value
-  * SkewFromMedian = (mean - median) / std ; SkewFromMode = (mean - mode) / std
-State this in the paper as a limitation.
+Feature definitions follow DoHMeter / DoHlyzer, the tool that produced the
+CIRA-CIC-DoHBrw-2020 CSVs (github.com/ahlashkari/DoHlyzer, meter/features/*.py):
+  * packet length  = frame length = IP packet size + 14 bytes Ethernet header
+  * PacketTime     = time of each packet RELATIVE TO THE FIRST packet of the flow
+                     (not the gap between packets)
+  * ResponseTime   = time between a client->server packet and the server->client
+                     packet that immediately follows it (any packet, data or not)
+  * variance       = population variance; std = sqrt(variance); mode = smallest of
+                     the most frequent values (scipy.stats.mode)
+  * SkewFromMedian = 3 * (mean - median) / std,  -10 when std == 0
+  * SkewFromMode   = (mean - mode) / std,        -10 when std == 0
+  * CoefficientofVariation = std / mean,         -1 when mean == 0
+  * Flow*Rate      = bytes / duration,           -1 when duration == 0
+  * a flow ends after 40 s of silence or when it is longer than 120 s
+A flow without any client->server->client turn has no ResponseTime median; DoHMeter
+writes NaN there and such rows are dropped, exactly like the dataset loader does.
+Remaining differences (capture point, flow cutting during garbage collection) are
+small but real: state them in the paper.
 """
 from __future__ import annotations
 
@@ -41,6 +51,9 @@ STAT_SUFFIXES = ["Variance", "StandardDeviation", "Mean", "Median", "Mode",
 STAT_GROUPS = ["PacketLength", "PacketTime", "ResponseTimeTime"]  # (sic) matches the dataset's spelling
 FEATURE_COLUMNS = BASE_FEATURES + [g + s for g in STAT_GROUPS for s in STAT_SUFFIXES]
 FLOW_COLUMNS = ID_COLUMNS + FEATURE_COLUMNS + ["Label", "Resolver", "Capture"]
+ETHERNET_HEADER = 14
+IDLE_TIMEOUT = 40.0
+MAX_FLOW_DURATION = 120.0
 
 
 # ----------------------------------------------------------------------------- packets
@@ -129,8 +142,10 @@ class Flow:
     hello: bytes = b""
 
 
-def build_flows(packets, server_ports, proto="TCP", flow_timeout=120.0) -> list[Flow]:
-    """Group packets into bidirectional flows. A flow ends after `flow_timeout` s of silence."""
+def build_flows(packets, server_ports, proto="TCP", flow_timeout=IDLE_TIMEOUT,
+                max_duration=MAX_FLOW_DURATION) -> list[Flow]:
+    """Group packets into bidirectional flows. A flow ends after `flow_timeout` s of silence
+    or once it has lasted `max_duration` s (DoHMeter: 40 s idle, flows cut after ~90-120 s)."""
     server_ports = set(server_ports)
     open_flows: dict = {}
     flows: list[Flow] = []
@@ -143,12 +158,12 @@ def build_flows(packets, server_ports, proto="TCP", flow_timeout=120.0) -> list[
             continue
         key = (cip, cport, sip, sport)
         fl = open_flows.get(key)
-        if fl is None or p.ts - fl.ts[-1] > flow_timeout:
+        if fl is None or p.ts - fl.ts[-1] > flow_timeout or (max_duration and p.ts - fl.ts[0] > max_duration):
             fl = Flow(cip, cport, sip, sport)
             open_flows[key] = fl
             flows.append(fl)
         fl.ts.append(p.ts)
-        fl.length.append(p.length)
+        fl.length.append(p.length + ETHERNET_HEADER)
         fl.c2s.append(c2s)
         fl.has_data.append(p.payload > 0)
         if c2s and p.payload > 0 and not fl.hello:
@@ -156,45 +171,44 @@ def build_flows(packets, server_ports, proto="TCP", flow_timeout=120.0) -> list[
     return flows
 
 
+def _mode(v: np.ndarray) -> float:
+    vals, counts = np.unique(v, return_counts=True)
+    return float(vals[counts.argmax()])
+
+
 def _stats(values) -> list[float]:
-    """[variance, std, mean, median, mode, skew_from_median, skew_from_mode, coeff_of_variation]"""
+    """DoHMeter statistics, in STAT_SUFFIXES order:
+    [variance, std, mean, median, mode, skew_from_median, skew_from_mode, coeff_of_variation]"""
     v = np.asarray(values, dtype=float)
     if v.size == 0:
-        return [0.0] * 8
+        return [-1.0, -1.0, -1.0, float("nan"), -1.0, float("nan"), 0.0, 1.0]
     mean, median = float(v.mean()), float(np.median(v))
-    var, std = float(v.var()), float(v.std())
-    vals, counts = np.unique(v, return_counts=True)
-    mode = float(vals[counts.argmax()])
-    skew_med = (mean - median) / std if std > 0 else 0.0
-    skew_mode = (mean - mode) / std if std > 0 else 0.0
-    cv = std / mean if mean != 0 else 0.0
+    var = float(v.var())
+    std = float(np.sqrt(var))
+    mode = _mode(v)
+    skew_med = 3 * (mean - median) / std if std != 0 else -10.0
+    skew_mode = (mean - mode) / std if std != 0 else -10.0
+    cv = std / mean if mean != 0 else -1.0
     return [var, std, mean, median, mode, skew_med, skew_mode, cv]
 
 
 def flow_features(fl: Flow) -> dict:
-    ts = np.asarray(fl.ts)
+    ts = np.asarray(fl.ts, dtype=float)
     ln = np.asarray(fl.length, dtype=float)
     c2s = np.asarray(fl.c2s, dtype=bool)
-    duration = float(ts[-1] - ts[0])
-    sent, recv = float(ln[c2s].sum()), float(ln[~c2s].sum())
-    gaps = np.diff(ts)
-    resp, waiting, last_req = [], False, 0.0
-    for t, up, data in zip(fl.ts, fl.c2s, fl.has_data):
-        if not data:
-            continue
-        if up:
-            last_req, waiting = t, True
-        elif waiting:
-            resp.append(t - last_req)
-            waiting = False
+    forward = c2s if c2s[0] else ~c2s          # DoHMeter: direction of the FIRST packet = forward
+    duration = float(ts.max() - ts.min())
+    sent, recv = float(ln[forward].sum()), float(ln[~forward].sum())
+    rel_times = ts - ts[0]
+    resp = [ts[i] - ts[i - 1] for i in range(1, len(ts)) if forward[i - 1] and not forward[i]]
     feats = {
         "Duration": duration,
         "FlowBytesSent": sent,
-        "FlowSentRate": sent / duration if duration > 0 else 0.0,
+        "FlowSentRate": sent / duration if duration > 0 else -1.0,
         "FlowBytesReceived": recv,
-        "FlowReceivedRate": recv / duration if duration > 0 else 0.0,
+        "FlowReceivedRate": recv / duration if duration > 0 else -1.0,
     }
-    for group, values in (("PacketLength", ln), ("PacketTime", gaps), ("ResponseTimeTime", resp)):
+    for group, values in (("PacketLength", ln), ("PacketTime", rel_times), ("ResponseTimeTime", resp)):
         for suffix, x in zip(STAT_SUFFIXES, _stats(values)):
             feats[group + suffix] = x
     return feats
@@ -215,9 +229,9 @@ def label_resolver(fl: Flow, meta: dict | None) -> str:
     return "unknown"
 
 
-def flows_to_frame(pcap, meta=None, server_ports=(443,), min_packets=4, flow_timeout=120.0,
-                   label="Benign", only_known=True) -> pd.DataFrame:
-    flows = build_flows(read_packets(pcap), server_ports, "TCP", flow_timeout)
+def flows_to_frame(pcap, meta=None, server_ports=(443,), min_packets=4, flow_timeout=IDLE_TIMEOUT,
+                   label="Benign", only_known=True, max_duration=MAX_FLOW_DURATION) -> pd.DataFrame:
+    flows = build_flows(read_packets(pcap), server_ports, "TCP", flow_timeout, max_duration)
     rows = []
     for fl in flows:
         if len(fl.ts) < min_packets:
@@ -286,7 +300,8 @@ def main() -> int:
     f.add_argument("--out", required=True)
     f.add_argument("--server-ports", type=int, nargs="+", default=[443])
     f.add_argument("--min-packets", type=int, default=4)
-    f.add_argument("--flow-timeout", type=float, default=120.0)
+    f.add_argument("--flow-timeout", type=float, default=IDLE_TIMEOUT, help="idle seconds that end a flow")
+    f.add_argument("--max-duration", type=float, default=MAX_FLOW_DURATION, help="cut flows longer than this")
     f.add_argument("--label", default="Benign", help="label to write (own traffic is benign by construction)")
     f.add_argument("--keep-unknown", action="store_true", help="keep flows not matched to a resolver")
 
@@ -305,7 +320,7 @@ def main() -> int:
     if a.cmd == "flows":
         meta = json.load(open(a.meta)) if a.meta else None
         df = flows_to_frame(a.pcap, meta, a.server_ports, a.min_packets, a.flow_timeout, a.label,
-                            only_known=not a.keep_unknown)
+                            only_known=not a.keep_unknown, max_duration=a.max_duration)
         if df.empty:
             print("[warn] no flows extracted - check --server-ports, the filter used for capture, and --meta",
                   file=sys.stderr)
